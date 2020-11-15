@@ -1,1 +1,0 @@
-# Katamari-Damacy-Clone
