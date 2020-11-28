@@ -1,3 +1,162 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (asteroids.dir\Debug\) contains files shared from another project (asteroids.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   main.cpp
-  asteroids.vcxproj -> C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\build\Debug\asteroids.exe
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(58,10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(58,10): warning C4183: 'Chicks': missing return type; assumed to be a member function returning 'int'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(6,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(6,8): error C2146: syntax error: missing ';' before identifier 'chick'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(29,3): error C2065: 'chick': undeclared identifier
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(37,2): error C2065: 'chick': undeclared identifier
+  Prince.cpp
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(88,2): error C2065: 'chick': undeclared identifier
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(58,10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(58,10): warning C4183: 'Chicks': missing return type; assumed to be a member function returning 'int'
+..\source\Prince.cpp(14,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Prince.cpp(24,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+..\source\Prince.cpp(52,46): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+..\source\Prince.cpp(93,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Prince.cpp(95,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Prince.cpp(96,35): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Prince.cpp(97,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Prince.cpp(98,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Prince.cpp(99,35): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Prince.cpp(175,24): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Chicks.cpp
+..\source\Prince.cpp(182,44): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(58,10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(58,10): warning C4183: 'Chicks': missing return type; assumed to be a member function returning 'int'
+..\source\Chicks.cpp(12,15): error C2653: 'Chicks': is not a class or namespace name
+..\source\Chicks.cpp(12,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+..\source\Chicks.cpp(17,7): error C2065: 'chick_state': undeclared identifier
+..\source\Chicks.cpp(18,7): error C2065: 'chick_state': undeclared identifier
+..\source\Chicks.cpp(18,57): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+..\source\Chicks.cpp(18,47): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+..\source\Chicks.cpp(18,70): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+..\source\Chicks.cpp(20,1): warning C4508: 'Chicks': function should return a value; 'void' return type assumed
+..\source\Chicks.cpp(23,32): error C2653: 'Chicks': is not a class or namespace name
+..\source\Chicks.cpp(25,20): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(28,32): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(28,53): error C2198: 'PFNGLBINDBUFFERPROC': too few arguments for call
+..\source\Chicks.cpp(30,26): warning C4305: 'initializing': truncation from 'double' to 'float'
+..\source\Chicks.cpp(31,21): error C2065: 'chick_state': undeclared identifier
+..\source\Chicks.cpp(34,5): error C2065: 'chick_state': undeclared identifier
+..\source\Chicks.cpp(34,35): error C2065: 'chick_state': undeclared identifier
+..\source\Chicks.cpp(36,32): error C2065: 'chick_state': undeclared identifier
+..\source\Chicks.cpp(37,32): error C2065: 'chick_state': undeclared identifier
+..\source\Chicks.cpp(40,9): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(45,39): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(45,60): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(47,45): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(47,58): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(49,42): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(49,62): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(49,76): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(51,28): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(52,28): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(54,24): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(55,24): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(55,82): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(63,27): error C2653: 'Chicks': is not a class or namespace name
+..\source\Chicks.cpp(67,5): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(67,35): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Chicks.cpp(68,5): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(68,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Chicks.cpp(69,5): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(69,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Chicks.cpp(70,5): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(70,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Chicks.cpp(71,5): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(71,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Chicks.cpp(72,5): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(72,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+..\source\Chicks.cpp(75,2): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(76,2): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(77,2): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(78,2): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(79,2): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(80,5): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(81,5): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(90,2): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(91,17): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(92,18): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(93,36): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(93,64): error C2660: 'check_shader_compilation': function does not take 1 arguments
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(76,13): message : see declaration of 'check_shader_compilation'
+..\source\Chicks.cpp(95,2): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(96,17): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(97,18): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(98,36): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(98,66): error C2660: 'check_shader_compilation': function does not take 1 arguments
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(76,13): message : see declaration of 'check_shader_compilation'
+..\source\Chicks.cpp(100,2): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(101,17): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(101,41): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(101,69): error C2198: 'PFNGLATTACHSHADERPROC': too few arguments for call
+..\source\Chicks.cpp(102,17): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(102,41): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(102,71): error C2198: 'PFNGLATTACHSHADERPROC': too few arguments for call
+..\source\Chicks.cpp(104,16): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(105,21): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(107,25): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(109,2): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(109,53): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(110,2): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(110,55): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(111,2): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(111,51): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(114,24): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(114,42): error C2198: 'PFNGLGENVERTEXARRAYSPROC': too few arguments for call
+..\source\Chicks.cpp(116,20): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(119,19): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(119,40): error C2198: 'PFNGLGENBUFFERSPROC': too few arguments for call
+..\source\Chicks.cpp(121,32): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(121,53): error C2198: 'PFNGLBINDBUFFERPROC': too few arguments for call
+..\source\Chicks.cpp(124,39): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(124,60): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(126,45): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(126,58): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(128,42): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(128,62): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(128,76): error C2065: 'chick_color': undeclared identifier
+..\source\Chicks.cpp(130,28): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(131,28): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(133,24): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(134,24): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(134,82): error C2065: 'chick_vert': undeclared identifier
+..\source\Chicks.cpp(141,24): error C2653: 'Chicks': is not a class or namespace name
+..\source\Chicks.cpp(143,15): error C2065: 'chick_GLvars': undeclared identifier
+..\source\Chicks.cpp(144,20): error C2065: 'chick_GLvars': undeclared identifier
+  Generating Code...
+..\source\Chicks.cpp(147,21): error C2065: 'chick_GLvars': undeclared identifier

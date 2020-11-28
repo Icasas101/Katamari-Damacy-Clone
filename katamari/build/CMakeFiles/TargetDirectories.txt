@@ -1,5 +1,5 @@
 C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/CMakeFiles/glad.dir
-C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/CMakeFiles/asteroids.dir
+C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/CMakeFiles/katamari.dir
 C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/CMakeFiles/ALL_BUILD.dir
 C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/CMakeFiles/ZERO_CHECK.dir
 C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/glfw-3.2/CMakeFiles/ALL_BUILD.dir
