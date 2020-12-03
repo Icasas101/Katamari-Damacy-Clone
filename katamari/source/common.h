@@ -18,11 +18,16 @@
 #include <vector>
 #include "utils/Angel.h"
 
+// include text stuff
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
 using namespace Angel;
 
 #include "shader.h"
 #include "Prince.h"
 #include "Chicks.h"
+#include "text.h"
 
 
 
