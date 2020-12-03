@@ -1,16 +1,4 @@
-﻿  main.cpp
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Prince.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+﻿  Chicks.cpp
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
@@ -22,29 +10,7 @@ C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(14,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(24,22): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(52,46): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(93,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(95,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(96,35): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(97,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(98,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(99,35): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(175,24): warning C4305: 'initializing': truncation from 'double' to 'float'
-  Chicks.cpp
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(182,44): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(18,57): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(18,47): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(18,70): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
@@ -54,6 +20,41 @@ C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(69,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(70,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(71,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-  Generating Code...
+  Prince.cpp
 C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(72,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(14,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(23,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(53,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(55,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(56,35): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(57,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(58,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(59,35): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  main.cpp
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(135,24): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+  Generating Code...
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
   katamari.vcxproj -> C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\build\Debug\katamari.exe

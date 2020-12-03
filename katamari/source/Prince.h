@@ -73,8 +73,8 @@ public:
   }
 
   inline void moveForward() {
-	  m1 *= TranslateZ();
-	  state.pointing = state.
+	  m1 *= Translate(0.0, -0.1, 0.0);
+	  state.pointing = state.RotateZ2D(0) * state.pointing;
   }
 
   void update_state();
