@@ -1,35 +1,547 @@
-﻿  Building Custom Rule C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/CMakeLists.txt
-  CMake is re-running because C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/CMakeFiles/generate.stamp is out-of-date.
-    the file 'C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/CMakeLists.txt'
-    is newer than 'C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/CMakeFiles/generate.stamp.depend'
-    result='-1'
-  -- Selecting Windows SDK version 10.0.18362.0 to target Windows 10.0.18363.
-  CMake Deprecation Warning at glfw-3.2/CMakeLists.txt:10 (cmake_policy):
-    The OLD behavior for policy CMP0042 will be removed from a future version
-    of CMake.
-  
-    The cmake-policies(7) manual explains that the OLD behaviors of all
-    policies are deprecated and that a policy should be set to OLD only under
-    specific short-term circumstances.  Projects should be ported to the NEW
-    behavior and not rely on setting a policy to OLD.
-  
-  
-  -- Could NOT find Vulkan (missing: VULKAN_LIBRARY VULKAN_INCLUDE_DIR) 
-  -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
-  -- Using Win32 for window creation
-  -- Configuring done
-  CMake Error at CMakeLists.txt:28 (add_executable):
-    Cannot find source file:
-  
-      source/Rooms.cpp
-  
-    Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
-    .hpp .hxx .in .txx
-  
-  
-  CMake Error at CMakeLists.txt:28 (add_executable):
-    No SOURCES given to target: katamari
-  
-  
-  CMake Generate step failed.  Build files cannot be regenerated correctly.
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(230,5): error MSB6006: "cmd.exe" exited with code 1.
+﻿  Balls.cpp
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(832,14): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(25,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(26,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.h(33,27): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(18,51): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(18,41): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(18,64): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(31,23): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(68,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(69,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(70,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(72,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(73,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(74,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(75,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(76,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(78,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(79,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(80,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(81,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(82,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(84,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(85,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(86,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(87,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(88,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(89,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(91,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(92,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(93,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(94,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(95,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(97,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(98,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(99,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(100,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(101,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(102,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(104,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(105,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(106,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(107,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(108,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(109,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(110,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(111,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(113,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(114,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(115,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(116,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(117,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(118,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(119,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(120,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(122,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(123,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(124,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(125,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(126,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  Chicks.cpp
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp(127,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(832,14): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(25,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(26,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.h(33,27): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(18,57): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(18,47): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(18,70): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(31,26): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(68,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(69,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(70,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(72,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(73,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(74,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(75,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(76,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(78,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(79,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(80,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(81,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(82,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(84,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(85,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(86,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(87,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(88,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(89,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(91,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(92,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(93,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(94,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(95,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(97,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(98,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(99,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(100,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(101,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(102,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(104,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(105,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(106,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(107,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(108,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(109,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(110,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(111,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(113,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(114,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(115,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(116,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(117,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(118,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(119,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(120,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(122,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(123,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(124,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(125,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(126,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  Kids.cpp
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp(127,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(832,14): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(25,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(26,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.h(33,27): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(18,50): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(18,40): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(18,63): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(31,23): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(68,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(69,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(70,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(72,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(73,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(74,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(75,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(76,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(78,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(79,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(80,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(81,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(82,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(84,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(85,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(86,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(87,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(88,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(89,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(91,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(92,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(93,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(94,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(95,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(97,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(98,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(99,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(100,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(101,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(102,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(104,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(105,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(106,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(107,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(108,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(109,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(110,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(111,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(113,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(114,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(115,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(116,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(117,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(118,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(119,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(120,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(122,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(123,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(124,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(125,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(126,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  Legos.cpp
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp(127,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(832,14): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(25,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(26,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.h(33,27): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(18,51): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(18,41): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(18,64): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(31,23): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(68,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(69,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(70,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(72,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(73,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(74,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(75,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(76,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(78,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(79,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(80,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(81,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(82,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(84,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(85,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(86,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(87,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(88,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(89,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(91,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(92,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(93,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(94,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(95,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(97,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(98,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(99,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(100,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(101,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(102,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(104,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(105,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(106,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(107,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(108,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(109,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(110,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(111,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(113,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(114,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(115,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(116,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(117,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(118,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(119,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(120,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(122,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(123,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(124,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(125,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(126,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  Prince.cpp
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp(127,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(832,14): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(25,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(26,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.h(33,27): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(14,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(23,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(53,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(55,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(56,35): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(57,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(58,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(59,35): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  Rooms.cpp
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.cpp(135,24): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(832,14): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(25,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(26,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  Sharks.cpp
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.h(33,27): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(832,14): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(25,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(26,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.h(33,27): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(18,52): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(18,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(18,65): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(31,23): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(68,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(69,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(70,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(72,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(73,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(74,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(75,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(76,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(78,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(79,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(80,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(81,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(82,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(84,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(85,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(86,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(87,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(88,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(89,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(91,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(92,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(93,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(94,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(95,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(97,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(98,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(99,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(100,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(101,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(102,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(104,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(105,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(106,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(107,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(108,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(109,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(110,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(111,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(113,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(114,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(115,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(116,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(117,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(118,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(119,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(120,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(122,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(123,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(124,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(125,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(126,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  main.cpp
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp(127,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(832,14): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(25,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(26,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.h(33,27): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(9,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(14,44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(15,44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(16,45): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(130,71): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(131,69): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(154,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(241,67): warning C4244: 'argument': conversion from 'int' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(242,67): warning C4244: 'argument': conversion from 'int' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(243,68): warning C4244: 'argument': conversion from 'int' to 'const GLfloat', possible loss of data
+  objloader.cpp
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\main.cpp(254,66): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(47,47): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils/Angel.h(48,45): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(708,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(709,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(710,18): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(731,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(733,24): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(736,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(753,30): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\mat.h(832,14): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h(59,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h(76,1): warning C4305: 'argument': truncation from 'double' to 'const GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(25,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h(26,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(25,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h(26,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.h(33,27): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(73,49): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(77,40): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(81,48): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(138,7): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(137,7): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(136,25): warning C4244: 'argument': conversion from 'double' to 'const GLfloat', possible loss of data
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(12,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(26,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(30,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(41,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(46,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(52,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
+C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp(56,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generating Code...
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
+  katamari.vcxproj -> C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\build\Debug\katamari.exe

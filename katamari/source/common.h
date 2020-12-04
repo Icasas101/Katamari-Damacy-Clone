@@ -9,6 +9,9 @@
 #ifndef Katamari_common_h
 #define Katamari_common_h
 
+#include <cmath>
+#include <iostream>
+#include <algorithm>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <stdlib.h>
@@ -32,6 +35,7 @@ using namespace Angel;
 #include "Kids.h"
 #include "Sharks.h"
 #include "Legos.h"
+#include "objloader.h"
 //#include "text.h"
 
 

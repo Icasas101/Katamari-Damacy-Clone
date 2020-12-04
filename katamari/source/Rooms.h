@@ -17,9 +17,9 @@ class Rooms {
 	vec2 room_vert[4];
 	vec3 room_color[4];
 
-	vec3 tan = vec3(0.824, 0.706, 0.549);
+	vec3 black = vec3(0.0, 0.0, 0.0);
 
-	//OpenGL variables for a ship
+	//OpenGL variables for a room
 	struct {
 		GLuint a_vao;           //Vertex array object
 		GLuint a_program;       //shader program

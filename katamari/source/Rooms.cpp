@@ -10,22 +10,22 @@
 
 //room constructor
 Rooms::Rooms() {
-	double x = 0.5;
+	
 };
 
 void Rooms::room_gl_init() {
 
-	room_vert[0] = vec2(-0.5, -0.5);
-	room_vert[1] = vec2(-0.5, 0.5);
-	room_vert[2] = vec2(0.5, -0.5);
-	room_vert[3] = vec2(0.5, 0.5);
+	room_vert[0] = vec2(-0.75, -0.75);
+	room_vert[1] = vec2(-0.75, 0.75);
+	room_vert[2] = vec2(0.75, -0.75);
+	room_vert[3] = vec2(0.75, 0.75);
 
 	size_t room_vert_bytes = 4 * sizeof(vec2);
 
-	room_color[0] = tan;
-	room_color[1] = tan;
-	room_color[2] = tan;
-	room_color[3] = tan;
+	room_color[0] = black;
+	room_color[1] = black;
+	room_color[2] = black;
+	room_color[3] = black;
 
 	size_t room_color_bytes = 4 * sizeof(vec3);
 
@@ -97,7 +97,7 @@ void Rooms::room_draw(mat4 proj) {
 	glUniformMatrix4fv(room_GLvars.a_M_location, 1, GL_TRUE, proj);
 
 	glPointSize(3.0);
-	glDrawArrays(GL_LINE, 0, 52);
+	glDrawArrays(GL_LINE_LOOP, 0, 4);
 
 	glBindVertexArray(0);
 	glUseProgram(0);

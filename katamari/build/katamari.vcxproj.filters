@@ -13,22 +13,22 @@
     <ClCompile Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="text.cpp">
+    <ClCompile Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Rooms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rooms.cpp">
+    <ClCompile Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Balls.cpp">
+    <ClCompile Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sharks.cpp">
+    <ClCompile Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Kids.cpp">
+    <ClCompile Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Legos.cpp">
+    <ClCompile Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -54,22 +54,22 @@
     <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="text.h">
+    <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Rooms.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Rooms.h">
+    <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Balls.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Balls.h">
+    <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Sharks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Legos.h">
+    <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Kids.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sharks.h">
+    <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Legos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Kids.h">
+    <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\objloader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

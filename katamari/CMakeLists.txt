@@ -47,7 +47,8 @@ add_executable(katamari WIN32 MACOSX_BUNDLE
 	source/Kids.cpp
 	source/Legos.h
 	source/Legos.cpp
-
+	source/objloader.h
+	source/objloader.cpp
 	shaders/fshader_Prince.glsl
 	shaders/vshader_Prince.glsl)
 	
