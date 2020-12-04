@@ -62,12 +62,12 @@ public:
     //Do something
 	  // update geometry here and change direction it's pointing
     m1 *= RotateZ(-30);
-    state.pointing = state.RotateZ2D(-15) * state.pointing;
+    state.pointing = state.RotateZ2D(-30) * state.pointing;
     
   }
   inline void rotateRight(){
     //Do something
-    m1 *= RotateZ(15);
+    m1 *= RotateZ(30);
     state.pointing = state.RotateZ2D(30) * state.pointing;
     
   }
