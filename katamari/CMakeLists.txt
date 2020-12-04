@@ -34,7 +34,8 @@ add_executable(katamari WIN32 MACOSX_BUNDLE
 	shaders/shader.cpp
 	source/main.cpp
 	source/Prince.cpp
-	source/Prince.h 
+	source/Prince.h
+    source/Obstacle.h 
 	source/Chicks.cpp
 	source/Chicks.h
 	source/Rooms.cpp

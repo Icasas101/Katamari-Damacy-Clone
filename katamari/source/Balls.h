@@ -10,13 +10,14 @@
 #define __Balls__
 
 #include "common.h"
+#include "Obstacle.h"
 
 #define _MAX_SPEED 10
 #define _DAMPING 0.98
 #define _ACC 3
 #define _ROT 15
 
-class Balls {
+class Balls : public Obstacle {
 
 	//Placeholders so everything compiles.  Customize for your ship
 	vec2 ball_vert[52];
