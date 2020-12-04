@@ -6,7 +6,11 @@
 using namespace Angel;
 
 class Mesh {
+
 public:
+
+	Mesh();
+
 	bool hasUV;
 	std::vector < vec4 > vertices;
 	std::vector < vec2 > uvs;

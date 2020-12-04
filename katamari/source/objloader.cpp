@@ -44,6 +44,9 @@ color4 material_diffuse(1.0, 0.8, 0.0, 1.0);
 color4 material_specular(0.8, 0.8, 0.8, 1.0);
 float material_shininess = 10;
 
+Mesh::Mesh() {
+};
+
 bool Mesh::loadOBJ(const char* path) {
 	std::vector< unsigned int > vertexIndices, uvIndices, normalIndices;
 	std::vector< vec3 > temp_vertices;
