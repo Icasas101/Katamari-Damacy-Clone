@@ -8,6 +8,8 @@
 
 #include "common.h"
 
+std::vector < Chicks * > chicks;
+
 //Chick constructor
 Chicks::Chicks() {
       double random_x = 0.5 - rand() / (float)RAND_MAX;
@@ -16,9 +18,13 @@ Chicks::Chicks() {
   
       chick_state.a_cur_location = vec2(0.5, 0.5);
       chick_state.a_velocity = normalize(vec2(random_x, random_y)) * random_m/300.0;
-      //chick_state.a_velocity = (0.0, 0.0);
+      //chick_state.a_velocity = (0.3, -0.2);
 
 };
+
+void Obstacle::emit(){
+    chicks.push_back(new Chicks());
+}
 
 //Called everytime an animation tick happens
 void Chicks::chick_update_state() {
@@ -27,6 +33,14 @@ void Chicks::chick_update_state() {
 
 	//Set GL state to use this buffer
 	glBindBuffer(GL_ARRAY_BUFFER, chick_GLvars.a_buffer);
+    
+    vec2 *pos = new vec2[chicks.size()];
+    vec3 *col = new vec3[chicks.size()];
+    
+    for(unsigned int i=0; i < chicks.size(); i++){
+        pos[i] = *(chicks[i]->c_vert_p);
+        col[i] = *(chicks[i]->c_col_p);
+    }
     
     float dt = 1.0 / 60.0;
     vec2 old_loc  = chick_state.a_cur_location;
@@ -43,17 +57,17 @@ void Chicks::chick_update_state() {
     
 
 	//Create GPU buffer to hold vertices and color
-	glBufferData(GL_ARRAY_BUFFER, sizeof(chick_vert) + sizeof(chick_color), NULL, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, chicks.size()*sizeof(chick_vert) + chicks.size()*sizeof(chick_color), NULL, GL_STATIC_DRAW);
 	//First part of array holds vertices
-	glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(chick_vert), chick_vert);
+	glBufferSubData(GL_ARRAY_BUFFER, 0, chicks.size()*sizeof(chick_vert), pos);
 	//Second part of array hold colors (offset by sizeof(triangle))
-	glBufferSubData(GL_ARRAY_BUFFER, sizeof(chick_vert), sizeof(chick_color), chick_color);
+	glBufferSubData(GL_ARRAY_BUFFER, chicks.size()*sizeof(chick_vert), chicks.size()*sizeof(chick_color), col);
 
 	glEnableVertexAttribArray(chick_GLvars.a_vpos_location);
 	glEnableVertexAttribArray(chick_GLvars.a_vcolor_location);
 
 	glVertexAttribPointer(chick_GLvars.a_vpos_location, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
-	glVertexAttribPointer(chick_GLvars.a_vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(chick_vert)));
+	glVertexAttribPointer(chick_GLvars.a_vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(chicks.size()*sizeof(chick_vert)));
 
 
 	//glBindVertexArray(0);
@@ -127,7 +141,7 @@ void Chicks::chick_gl_init() {
     chick_vert[51] = vec2(0.12, 0.12);
 
   
-	size_t chick_vert_bytes = 6 * sizeof(vec2);
+	size_t chick_vert_bytes = 52 * sizeof(vec2);
 
 	chick_color[0] = yellow;
 	chick_color[1] = yellow;
@@ -190,7 +204,7 @@ void Chicks::chick_gl_init() {
 
   
   
-	size_t chick_color_bytes = 6 * sizeof(vec3);
+	size_t chick_color_bytes = 52 * sizeof(vec3);
 
 	std::string vshader = shader_path + "vshader_Prince.glsl";
 	std::string fshader = shader_path + "fshader_Prince.glsl";
@@ -259,10 +273,14 @@ void Chicks::chick_draw(mat4 proj) {
 //    mat4 M4 = (Translate(-0.915,0.5,0) * RotateZ(-45) * Scale(2));
 
 	//If you have a modelview matrix, pass it with proj
-	glUniformMatrix4fv(chick_GLvars.a_M_location, 1, GL_TRUE, proj*duck_scale);
+	glUniformMatrix4fv(chick_GLvars.a_M_location, 1, GL_TRUE, proj * Scale(0.5));
     
     glPointSize(3.0);
-	glDrawArrays(GL_POINTS, 0, 52);
+	
+//    for (int i = 0; i < chicks.size(); i++) {
+//        glDrawArrays(GL_POINTS, 0, 52);
+//    };
+    glDrawArrays(GL_POINTS, 0, 52);
 
 	glBindVertexArray(0);
 	glUseProgram(0);

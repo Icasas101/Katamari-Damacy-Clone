@@ -34,6 +34,8 @@ public:
     
     bool hit;
     
+    void emit();
+    
     
 //    //Record of the chick's state
 //    struct {

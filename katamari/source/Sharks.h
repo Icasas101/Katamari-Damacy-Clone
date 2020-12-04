@@ -20,8 +20,8 @@
 class Sharks : public Obstacle {
 
 	//Placeholders so everything compiles.  Customize for your ship
-	vec2 shark_vert[52];
-	vec3 shark_color[52];
+	vec2 shark_vert[58];
+	vec3 shark_color[58];
 
 
 	//Record of the shark's state

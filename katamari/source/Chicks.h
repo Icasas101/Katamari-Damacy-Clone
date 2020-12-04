@@ -22,6 +22,9 @@ class Chicks : public Obstacle {
 	//Placeholders so everything compiles.  Customize for your ship
 	vec2 chick_vert[52];
 	vec3 chick_color[52];
+    
+    vec2* c_vert_p = chick_vert;
+    vec3* c_col_p = chick_color;
 
 	//Record of the chick's state
 	struct {

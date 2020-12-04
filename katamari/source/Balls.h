@@ -20,8 +20,8 @@
 class Balls : public Obstacle {
 
 	//Placeholders so everything compiles.  Customize for your ship
-	vec2 ball_vert[52];
-	vec3 ball_color[52];
+	vec2 ball_vert[69];
+	vec3 ball_color[69];
 
 	vec3 yellow = vec3(1.0, 0.85, 0.41);
 	vec3 orange = vec3(0.97, 0.44, 0.30);

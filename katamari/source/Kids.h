@@ -20,8 +20,8 @@
 class Kids : public Obstacle {
 
 	//Placeholders so everything compiles.  Customize for your ship
-	vec2 kid_vert[52];
-	vec3 kid_color[52];
+	vec2 kid_vert[56];
+	vec3 kid_color[56];
 
 	//Record of the kid's state
 	struct {
