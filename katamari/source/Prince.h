@@ -19,8 +19,21 @@
 class Prince{
 
   //Placeholders so everything compiles.  Customize for your ship
-  vec2 prince_vert[6];
-  vec3 prince_color[6];
+  vec2 prince_vert[56];
+  vec3 prince_color[56];
+    
+    vec3 yellow = vec3(1.0, 0.85, 0.41);
+    vec3 orange = vec3(0.97, 0.44, 0.30);
+    vec3 pink = vec3(1.0, 0.38, 0.38);
+    vec3 blue = vec3(0.32, 0.57, 0.74);
+    vec3 purple = vec3(0.59, 0.24, 0.54);
+    vec3 green = vec3(0.56, 0.75, 0.3);
+    vec3 dgreen = vec3(0.24, 0.6, 0.24);
+    vec3 almond = vec3(0.93, 0.83, 0.74);
+    vec3 brown = vec3(0.44, 0.36, 0.31);
+    
+    vec3 black = vec3(0.0, 0.0, 0.0);
+    vec3 white = vec3(1.0,1.0, 1.0);
   
   //Record of the ship's state
   struct {
@@ -58,16 +71,16 @@ public:
  
   mat4 m1;
 
-  inline void rotateLeft() {
+  inline void moveLeft() {
     //Do something
 	  // update geometry here and change direction it's pointing
-    m1 *= RotateZ(-30);
+    m1 *= Translate(-0.1, 0.0, 0.0);
     state.pointing = state.RotateZ2D(-30) * state.pointing;
     
   }
-  inline void rotateRight(){
+  inline void moveRight(){
     //Do something
-    m1 *= RotateZ(30);
+    m1 *= Translate(0.1, 0.0, 0.0);
     state.pointing = state.RotateZ2D(30) * state.pointing;
     
   }
@@ -75,6 +88,11 @@ public:
   inline void moveForward() {
 	  m1 *= Translate(0.0, -0.1, 0.0);
 	  state.pointing = state.RotateZ2D(0) * state.pointing;
+  }
+    
+  inline void moveDown() {
+    m1 *= Translate(0.0, 0.1, 0.0);
+    state.pointing = state.RotateZ2D(0) * state.pointing;
   }
 
   void update_state();
