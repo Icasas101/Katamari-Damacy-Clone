@@ -5,6 +5,10 @@ using namespace Angel;
 Prince prince;
 Chicks chick;
 Rooms room;
+Kids kid;
+Legos lego;
+Sharks shark;
+Balls ball;
 
 static void error_callback(int error, const char* description)
 {

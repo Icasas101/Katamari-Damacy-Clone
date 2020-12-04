@@ -316,8 +316,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Kids.cpp" />
+    <ClCompile Include="Legos.cpp" />
     <ClCompile Include="Rooms.cpp" />
+    <ClCompile Include="Balls.cpp" />
+    <ClCompile Include="Sharks.cpp" />
     <ClCompile Include="text.cpp" />
+    <ClInclude Include="Balls.h" />
     <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\common.h" />
     <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\Angel.h" />
     <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\utils\CheckError.h" />
@@ -329,7 +334,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h" />
     <ClCompile Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.cpp" />
     <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h" />
+    <ClInclude Include="Kids.h" />
+    <ClInclude Include="Legos.h" />
     <ClInclude Include="Rooms.h" />
+    <ClInclude Include="Sharks.h" />
     <ClInclude Include="text.h" />
     <None Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\shaders\fshader_Prince.glsl">
     </None>

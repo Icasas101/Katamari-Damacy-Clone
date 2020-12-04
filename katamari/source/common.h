@@ -28,6 +28,10 @@ using namespace Angel;
 #include "Prince.h"
 #include "Chicks.h"
 #include "Rooms.h"
+#include "Balls.h"
+#include "Kids.h"
+#include "Sharks.h"
+#include "Legos.h"
 //#include "text.h"
 
 

@@ -39,6 +39,15 @@ add_executable(katamari WIN32 MACOSX_BUNDLE
 	source/Chicks.h
 	source/Rooms.cpp
 	source/Rooms.h
+	source/Balls.h
+	source/Balls.cpp
+	source/Sharks.h
+	source/Sharks.cpp
+	source/Kids.h
+	source/Kids.cpp
+	source/Legos.h
+	source/Legos.cpp
+
 	shaders/fshader_Prince.glsl
 	shaders/vshader_Prince.glsl)
 	
