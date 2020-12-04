@@ -37,6 +37,8 @@ add_executable(katamari WIN32 MACOSX_BUNDLE
 	source/Prince.h 
 	source/Chicks.cpp
 	source/Chicks.h
+	source/Rooms.cpp
+	source/Rooms.h
 	shaders/fshader_Prince.glsl
 	shaders/vshader_Prince.glsl)
 	

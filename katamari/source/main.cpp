@@ -4,6 +4,7 @@ using namespace Angel;
 
 Prince prince;
 Chicks chick;
+Rooms room;
 
 static void error_callback(int error, const char* description)
 {
@@ -29,6 +30,7 @@ void init(){
   glHint (GL_POINT_SMOOTH_HINT, GL_NICEST);
   prince.gl_init();
   chick.chick_gl_init();
+  room.room_gl_init();
 }
 
 //Call update function 30 times a second
@@ -88,6 +90,7 @@ int main(void)
     
     prince.draw(proj);
 	chick.chick_draw(proj);
+	room.room_draw(proj);
     
     glfwSwapBuffers(window);
     glfwPollEvents();

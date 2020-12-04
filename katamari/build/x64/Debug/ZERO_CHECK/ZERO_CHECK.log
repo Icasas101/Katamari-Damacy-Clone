@@ -18,5 +18,18 @@
   -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
   -- Using Win32 for window creation
   -- Configuring done
-  -- Generating done
-  -- Build files have been written to: C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build
+  CMake Error at CMakeLists.txt:28 (add_executable):
+    Cannot find source file:
+  
+      source/Rooms.cpp
+  
+    Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+    .hpp .hxx .in .txx
+  
+  
+  CMake Error at CMakeLists.txt:28 (add_executable):
+    No SOURCES given to target: katamari
+  
+  
+  CMake Generate step failed.  Build files cannot be regenerated correctly.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(230,5): error MSB6006: "cmd.exe" exited with code 1.

@@ -16,6 +16,9 @@
     <ClCompile Include="text.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Rooms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\common.h">
@@ -40,6 +43,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rooms.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,7 +2,7 @@
 //  Chick.h
 //  Chick
 //
-//  Created by Lana Biren, Isabella Casas, Ashley Chen on 9/13/2020
+//  Created by Lana Biren, Isabella Casas, Ashley Chen on 12/3/2020
 //
 //
 
