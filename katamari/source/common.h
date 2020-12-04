@@ -29,6 +29,7 @@ using namespace Angel;
 
 #include "shader.h"
 #include "Prince.h"
+#include "Obstacle.h"
 #include "Chicks.h"
 #include "Rooms.h"
 #include "Balls.h"
