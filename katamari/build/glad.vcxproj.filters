@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\glfw-3.2\deps\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\glfw-3.2\deps\glad\glad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3EF06989-9E4A-31B6-9C38-639DE91C63ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0A7C2349-6AFC-3A08-8E62-AFB4202AD6E5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

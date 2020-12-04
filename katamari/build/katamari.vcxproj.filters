@@ -51,6 +51,9 @@
     <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Prince.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Obstacle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\Isabe\Documents\GitHub\Katamari-Damacy-Clone\katamari\source\Chicks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
