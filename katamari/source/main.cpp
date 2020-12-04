@@ -27,6 +27,8 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
     prince.rotateRight();
   if (key == GLFW_KEY_UP && (action == GLFW_PRESS || action == GLFW_REPEAT))
 	prince.moveForward();
+  if (key == GLFW_KEY_DOWN && (action == GLFW_PRESS || action == GLFW_REPEAT))
+	prince.moveDown();
 }
 
 void init(){

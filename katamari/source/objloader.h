@@ -51,9 +51,9 @@ public:
 		return os;
 	}
 
-	void Mesh::mesh_gl_init();
+	void mesh_gl_init();
 
-	void Mesh::mesh_draw(int width, int height);
+	void mesh_draw(int width, int height);
 
 };
 
