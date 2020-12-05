@@ -37,7 +37,7 @@ void Kids::kid_update_state() {
 	float x_move = old_loc.x - kid_state.a_cur_location.x;
 	float y_move = old_loc.y - kid_state.a_cur_location.y;
 	moved = vec2(x_move, y_move);
-	for (int i = 0; i < 52; i++) {
+	for (int i = 0; i < 56; i++) {
 		kid_vert[i] += moved;
 	}
 

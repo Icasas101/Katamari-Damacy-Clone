@@ -137,7 +137,7 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 
 void init(){
   
-  glClearColor(0.824, 0.706, 0.549, 1.0);
+  glClearColor(0.44, 0.36, 0.31, 1.0);
 
   glHint (GL_LINE_SMOOTH_HINT, GL_NICEST);
   glHint (GL_POINT_SMOOTH_HINT, GL_NICEST);
@@ -206,8 +206,6 @@ void animate(){
 	if (abs(prince_loc.x = shark_loc.x) < 0.1 && abs(prince_loc.y - shark_loc.y) < 0.1) {
 		std::cout << "overlap";
 	}
-  }
-}
 
 int main(void)
 
