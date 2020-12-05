@@ -140,9 +140,11 @@ void Sharks::shark_gl_init() {
 	size_t shark_vert_bytes = 58 * sizeof(vec2);
 
 	for (int i = 0; i < 58; i++) {
+        shark_vert[i] = zoom(1.2, 1.2) * shark_vert[i];
 		shark_vert[i] += vec2(0.3, 0.4);
 	}
-
+    
+    shark_state.a_cur_location = zoom(1.2, 1.2) * shark_state.a_cur_location;
 	shark_state.a_cur_location += vec2(0.3, 0.4);
 
 	shark_color[0] = blue;
@@ -284,7 +286,7 @@ void Sharks::shark_draw(mat4 proj) {
 	//    mat4 M4 = (Translate(-0.915,0.5,0) * RotateZ(-45) * Scale(2));
 
 		//If you have a modelview matrix, pass it with proj
-	glUniformMatrix4fv(shark_GLvars.a_M_location, 1, GL_TRUE, proj * Scale(1.2));
+	glUniformMatrix4fv(shark_GLvars.a_M_location, 1, GL_TRUE, proj);
 
     glPointSize(7.0);
     glDrawArrays(GL_POINTS, 0, 58);

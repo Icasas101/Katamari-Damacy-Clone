@@ -72,6 +72,10 @@ public:
   } state;
  
   mat4 m1;
+    
+  mat2 zoom(GLfloat x_scale, GLfloat y_scale) {
+      return mat2( x_scale, 0.0, 0.0, y_scale );
+  }
 
   inline void moveLeft() {
       state.moved = vec2(-0.03, 0.0);

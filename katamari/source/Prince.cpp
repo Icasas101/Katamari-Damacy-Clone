@@ -149,6 +149,13 @@ void Prince::gl_init(){
     prince_vert[59] = vec2(0.19, 0.1);
     
     size_t prince_vert_bytes = 60 * sizeof(vec2);
+  
+    for (int i = 0; i < 60; i++) {
+      prince_vert[i] = zoom(0.8, 1.2) * prince_vert[i];
+    }
+  
+    state.cur_location = zoom(0.8, 1.2) * state.cur_location;
+    state.katamari = zoom(0.8, 1.2) * state.katamari;
     
     prince_color[0] = orange;
     prince_color[1] = yellow;
@@ -291,7 +298,7 @@ void Prince::draw(mat4 proj){
   vec2 new_velocity;
   float dt = 1.0 / 60.0;
   //If you have a modelview matrix, pass it with proj
-  glUniformMatrix4fv( GLvars.M_location, 1, GL_TRUE, proj * Scale(0.8, 1.2, 0.8));
+  glUniformMatrix4fv( GLvars.M_location, 1, GL_TRUE, proj);
   
   glPointSize(6.0);
   glDrawArrays(GL_POINTS, 0, 60);

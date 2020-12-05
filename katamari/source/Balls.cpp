@@ -151,9 +151,11 @@ void Balls::ball_gl_init() {
     size_t ball_vert_bytes = 69 * sizeof(vec2);
     
     for (int i = 0; i < 69; i++) {
+        ball_vert[i] = zoom(1.5, 2.0) * ball_vert[i];
         ball_vert[i] += vec2(-0.3, 0.1);
     }
     
+    ball_state.a_cur_location = zoom(1.5, 2.0) * ball_state.a_cur_location;
     ball_state.a_cur_location += vec2(-0.3, -0.2);
     
     ball_color[0] = white;
@@ -305,7 +307,7 @@ void Balls::ball_draw(mat4 proj) {
 	//    mat4 M4 = (Translate(-0.915,0.5,0) * RotateZ(-45) * Scale(2));
 
 		//If you have a modelview matrix, pass it with proj
-	glUniformMatrix4fv(ball_GLvars.a_M_location, 1, GL_TRUE, proj * Scale(1.5, 2.0, 1.5));
+	glUniformMatrix4fv(ball_GLvars.a_M_location, 1, GL_TRUE, proj);
 
 	glPointSize(8.0);
 	glDrawArrays(GL_POINTS, 0, 69);

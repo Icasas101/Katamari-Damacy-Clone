@@ -36,6 +36,10 @@ public:
     
     void emit();
     
+    mat2 zoom(GLfloat x_scale, GLfloat y_scale) {
+        return mat2( x_scale, 0.0, 0.0, y_scale );
+    }
+    
 
     
 };

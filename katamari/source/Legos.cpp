@@ -133,9 +133,11 @@ void Legos::lego_gl_init() {
 	size_t lego_vert_bytes = 49 * sizeof(vec2);
     
     for (int i = 0; i < 49; i++) {
+        lego_vert[i] = zoom(0.85, 0.85) * lego_vert[i];
         lego_vert[i] += vec2(0.2, -0.3);
     }
     
+    lego_state.a_cur_location = zoom(0.85, 0.85) * lego_state.a_cur_location;
     lego_state.a_cur_location += vec2(0.2, -0.3);
 
 	lego_color[0] = orange;
@@ -268,7 +270,7 @@ void Legos::lego_draw(mat4 proj) {
 	//    mat4 M4 = (Translate(-0.915,0.5,0) * RotateZ(-45) * Scale(2));
 
 		//If you have a modelview matrix, pass it with proj
-	glUniformMatrix4fv(lego_GLvars.a_M_location, 1, GL_TRUE, proj * Scale(0.85));
+	glUniformMatrix4fv(lego_GLvars.a_M_location, 1, GL_TRUE, proj);
 
 	glPointSize(5.0);
 	glDrawArrays(GL_POINTS, 0, 49);

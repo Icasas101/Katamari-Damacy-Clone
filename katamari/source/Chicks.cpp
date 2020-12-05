@@ -55,7 +55,7 @@ void Chicks::chick_update_state() {
         chick_vert[i] += moved;
     }
     
-    if (chick_state.a_cur_location.x > 1.4 || chick_state.a_cur_location.x < -3.5 || chick_state.a_cur_location.y > 2.5 || chick_state.a_cur_location.y < -2.5) {
+    if (chick_state.a_cur_location.x > 1.2 || chick_state.a_cur_location.x < -1.2 || chick_state.a_cur_location.y > 0.8 || chick_state.a_cur_location.y < -0.8) {
         chick_state.a_velocity = (chick_state.a_velocity * -0.8);
 //        chick_state.a_cur_location += chick_state.a_velocity * dt;
     }
@@ -148,9 +148,11 @@ void Chicks::chick_gl_init() {
   
 	size_t chick_vert_bytes = 52 * sizeof(vec2);
     for (int i = 0; i < 52; i++) {
+        chick_vert[i] = zoom(0.5, 0.5) * chick_vert[i];
         chick_vert[i] += vec2(-0.1, -0.2);
     }
     
+    chick_state.a_cur_location = zoom(0.5, 0.5) * chick_state.a_cur_location;
     chick_state.a_cur_location += vec2(-0.1, -0.2);
 
 	chick_color[0] = yellow;
@@ -283,7 +285,7 @@ void Chicks::chick_draw(mat4 proj) {
 //    mat4 M4 = (Translate(-0.915,0.5,0) * RotateZ(-45) * Scale(2));
 
 	//If you have a modelview matrix, pass it with proj
-	glUniformMatrix4fv(chick_GLvars.a_M_location, 1, GL_TRUE, proj * Scale(0.5));
+	glUniformMatrix4fv(chick_GLvars.a_M_location, 1, GL_TRUE, proj);
     
     glPointSize(3.0);
 	

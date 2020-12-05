@@ -250,7 +250,7 @@ void check_collision() {
 
 //Call update function 30 times a second
 void animate(){
-  if(glfwGetTime() > 0.015){
+  if(glfwGetTime() > 0.033){
     glfwSetTime(0.0);
     
     //prince.update_state();
@@ -368,7 +368,7 @@ int main(void)
     
     //room.room_draw(proj);
     //frame.mesh_draw(width, height);
-    prince.draw(proj);
+    //prince.draw(proj);
 	chick.chick_draw(proj);
 	chick2.chick_draw(proj);
 	chick3.chick_draw(proj);
@@ -389,6 +389,7 @@ int main(void)
 	lego5.lego_draw(proj);
     kid.kid_draw(proj);
 	kid2.kid_draw(proj);
+    prince.draw(proj);
 	
     
     glfwSwapBuffers(window);
