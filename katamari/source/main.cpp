@@ -9,7 +9,7 @@ Kids kid;
 Legos lego;
 Sharks shark;
 Balls ball;
-Mesh frame;
+//Mesh frame;
 
 
 static void error_callback(int error, const char* description)
@@ -22,9 +22,9 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
   if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
     glfwSetWindowShouldClose(window, GLFW_TRUE);
   if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT))
-    prince.rotateLeft();
+    prince.moveLeft();
   if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT))
-    prince.rotateRight();
+    prince.moveRight();
   if (key == GLFW_KEY_UP && (action == GLFW_PRESS || action == GLFW_REPEAT))
 	prince.moveForward();
   if (key == GLFW_KEY_DOWN && (action == GLFW_PRESS || action == GLFW_REPEAT))
@@ -40,7 +40,7 @@ void init(){
   prince.gl_init();
   chick.chick_gl_init();
   room.room_gl_init();
-  frame.mesh_gl_init();
+  //frame.mesh_gl_init();
 
 
 }
@@ -57,6 +57,7 @@ void animate(){
 }
 
 int main(void)
+
 {
   GLFWwindow* window;
   
@@ -104,7 +105,7 @@ int main(void)
     prince.draw(proj);
 	chick.chick_draw(proj);
 	room.room_draw(proj);
-	frame.mesh_draw(width, height);
+	//frame.mesh_draw(width, height);
     
     glfwSwapBuffers(window);
     glfwPollEvents();

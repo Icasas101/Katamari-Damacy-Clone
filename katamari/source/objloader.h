@@ -16,6 +16,10 @@ public:
 	std::vector < vec2 > uvs;
 	std::vector < vec3 > normals;
 
+	std::vector < vec3 > out_vertices;
+	std::vector < vec2 > out_uvs;
+	std::vector < vec3 > out_normals;
+
 	vec3 box_min;
 	vec3 box_max;
 	vec3 center;
@@ -31,12 +35,12 @@ public:
 		center(0, 0, 0),
 		scale(1.0),
 		model_view() {
-		loadOBJ(path);
+		loadOBJ(path, out_vertices, out_uvs, out_normals);
 	}
 
 	unsigned int getNumTri() { return vertices.size() / 3; }
 
-	bool loadOBJ(const char* path);
+	bool loadOBJ(const char* path, std::vector <vec3>& out_vertices, std::vector <vec2>& out_uvs, std::vector <vec3>& out_normals);
 
 	friend std::ostream& operator << (std::ostream& os, const Mesh& v) {
 		os << "Vertices:\n";
