@@ -79,6 +79,8 @@ public:
 //    }
 
 	void chick_update_state();
+    
+    void stuck(Prince prince);
 
 	void chick_gl_init();
 

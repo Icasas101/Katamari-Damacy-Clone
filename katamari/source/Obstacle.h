@@ -32,9 +32,11 @@ public:
     vec3 black = vec3(0.0, 0.0, 0.0);
     vec3 white = vec3(1.0,1.0, 1.0);
     
-    bool hit;
+    bool hit = false;
+    vec2 k_offset;
     
-    void emit();
+    vec2 cur_location;
+    
     
     mat2 zoom(GLfloat x_scale, GLfloat y_scale) {
         return mat2( x_scale, 0.0, 0.0, y_scale );

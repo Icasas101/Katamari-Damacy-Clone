@@ -77,6 +77,8 @@ public:
 	//    }
 
 	void shark_update_state();
+    
+    void stuck(Prince prince);
 
 	void shark_gl_init();
 

@@ -75,6 +75,8 @@ public:
 	//    }
 
 	void lego_update_state();
+    
+    void stuck(Prince prince);
 
 	void lego_gl_init();
 

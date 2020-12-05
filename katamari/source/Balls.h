@@ -75,6 +75,8 @@ public:
 	//    }
 
 	void ball_update_state();
+    
+    void stuck(Prince prince);
 
 	void ball_gl_init();
 

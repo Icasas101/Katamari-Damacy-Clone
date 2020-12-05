@@ -16,14 +16,46 @@ Chicks::Chicks() {
       double random_y = 0.5 - rand() / (float)RAND_MAX;
       double random_m = rand() % 100;
   
-      chick_state.a_cur_location = vec2(0.0, 0.0);
+      chick_state.a_cur_location = vec2(0.07, 0.09);
       chick_state.a_velocity = normalize(vec2(random_x, random_y)) * random_m/150.0;
       //chick_state.a_velocity = (0.3, -0.2);
 
 };
 
-void Obstacle::emit(){
-    chicks.push_back(new Chicks());
+void Chicks::stuck(Prince pr){
+    
+    //Set GL state to use vertex array object
+    glBindVertexArray(chick_GLvars.a_vao);
+    
+    //Set GL state to use this buffer
+    glBindBuffer(GL_ARRAY_BUFFER, chick_GLvars.a_buffer);
+    
+    float dt = 1.0 / 60.0;
+    vec2 old_loc  = chick_state.a_cur_location;
+    vec2 moved;
+    
+    chick_state.a_cur_location = pr.state.katamari + k_offset; // calculate center while with the katamri
+    
+    float x_move = old_loc.x - chick_state.a_cur_location.x;
+    float y_move = old_loc.y - chick_state.a_cur_location.y;
+    moved = vec2(-x_move, -y_move);
+    for (int i = 0; i < 52; i++) {
+        chick_vert[i] += moved;
+    }
+    
+    
+    //Create GPU buffer to hold vertices and color
+    glBufferData(GL_ARRAY_BUFFER, sizeof(chick_vert) + sizeof(chick_color), NULL, GL_STATIC_DRAW);
+    //First part of array holds vertices
+    glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(chick_vert), chick_vert);
+    //Second part of array hold colors (offset by sizeof(triangle))
+    glBufferSubData(GL_ARRAY_BUFFER, sizeof(chick_vert), sizeof(chick_color), chick_color);
+    
+    glEnableVertexAttribArray(chick_GLvars.a_vpos_location);
+    glEnableVertexAttribArray(chick_GLvars.a_vcolor_location);
+    
+    glVertexAttribPointer(chick_GLvars.a_vpos_location, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
+    glVertexAttribPointer(chick_GLvars.a_vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(chick_vert)));
 }
 
 //Called everytime an animation tick happens
@@ -50,7 +82,7 @@ void Chicks::chick_update_state() {
     
     float x_move = old_loc.x - chick_state.a_cur_location.x;
     float y_move = old_loc.y - chick_state.a_cur_location.y;
-    moved = vec2(x_move, y_move);
+    moved = vec2(-x_move, -y_move);
     for (int i = 0; i < 52; i++) {
         chick_vert[i] += moved;
     }

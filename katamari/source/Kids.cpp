@@ -14,11 +14,47 @@ Kids::Kids() {
 	double random_y = 0.5 - rand() / (float)RAND_MAX;
 	double random_m = rand() % 100;
 
-	kid_state.a_cur_location = vec2(0.0, 0.0);
+	kid_state.a_cur_location = vec2(0.08, 0.09);
 	kid_state.a_velocity = normalize(vec2(random_x, random_y)) * random_m / 300.0;
 	//kid_state.a_velocity = (0.0, 0.0);
 
 };
+
+void Kids::stuck(Prince pr){
+    
+    //Set GL state to use vertex array object
+    glBindVertexArray(kid_GLvars.a_vao);
+    
+    //Set GL state to use this buffer
+    glBindBuffer(GL_ARRAY_BUFFER, kid_GLvars.a_buffer);
+    
+    float dt = 1.0 / 60.0;
+    vec2 old_loc  = kid_state.a_cur_location;
+    vec2 moved;
+    
+    kid_state.a_cur_location = pr.state.katamari + k_offset; // calculate center while with the katamri
+    
+    float x_move = old_loc.x - kid_state.a_cur_location.x;
+    float y_move = old_loc.y - kid_state.a_cur_location.y;
+    moved = vec2(-x_move, -y_move);
+    for (int i = 0; i < 56; i++) {
+        kid_vert[i] += moved;
+    }
+    
+    
+    //Create GPU buffer to hold vertices and color
+    glBufferData(GL_ARRAY_BUFFER, sizeof(kid_vert) + sizeof(kid_color), NULL, GL_STATIC_DRAW);
+    //First part of array holds vertices
+    glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(kid_vert), kid_vert);
+    //Second part of array hold colors (offset by sizeof(triangle))
+    glBufferSubData(GL_ARRAY_BUFFER, sizeof(kid_vert), sizeof(kid_color), kid_color);
+    
+    glEnableVertexAttribArray(kid_GLvars.a_vpos_location);
+    glEnableVertexAttribArray(kid_GLvars.a_vcolor_location);
+    
+    glVertexAttribPointer(kid_GLvars.a_vpos_location, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
+    glVertexAttribPointer(kid_GLvars.a_vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(kid_vert)));
+}
 
 //Called everytime an animation tick happens
 void Kids::kid_update_state() {

@@ -59,6 +59,7 @@ public:
 	} kid_state;
 
 	mat4 kid_move;
+    
 
 	//    inline void rotateLeft() {
 	//        //Do something
@@ -75,6 +76,8 @@ public:
 	//    }
 
 	void kid_update_state();
+    
+    void stuck(Prince prince);
 
 	void kid_gl_init();
 

@@ -14,11 +14,47 @@ Balls::Balls() {
 	double random_y = 0.5 - rand() / (float)RAND_MAX;
 	double random_m = rand() % 100;
 
-	ball_state.a_cur_location = vec2(0.0, 0.0);
+	ball_state.a_cur_location = vec2(0.08, 0.08);
 	ball_state.a_velocity = normalize(vec2(random_x, random_y)) * random_m / 300.0;
 	//ball_state.a_velocity = (0.0, 0.0);
 
 };
+
+void Balls::stuck(Prince pr){
+    
+    //Set GL state to use vertex array object
+    glBindVertexArray(ball_GLvars.a_vao);
+    
+    //Set GL state to use this buffer
+    glBindBuffer(GL_ARRAY_BUFFER, ball_GLvars.a_buffer);
+    
+    float dt = 1.0 / 60.0;
+    vec2 old_loc  = ball_state.a_cur_location;
+    vec2 moved;
+    
+    ball_state.a_cur_location = pr.state.katamari + k_offset; // calculate center while with the katamri
+    
+    float x_move = old_loc.x - ball_state.a_cur_location.x;
+    float y_move = old_loc.y - ball_state.a_cur_location.y;
+    moved = vec2(-x_move, -y_move);
+    for (int i = 0; i < 69; i++) {
+        ball_vert[i] += moved;
+    }
+    
+    
+    //Create GPU buffer to hold vertices and color
+    glBufferData(GL_ARRAY_BUFFER, sizeof(ball_vert) + sizeof(ball_color), NULL, GL_STATIC_DRAW);
+    //First part of array holds vertices
+    glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(ball_vert), ball_vert);
+    //Second part of array hold colors (offset by sizeof(triangle))
+    glBufferSubData(GL_ARRAY_BUFFER, sizeof(ball_vert), sizeof(ball_color), ball_color);
+    
+    glEnableVertexAttribArray(ball_GLvars.a_vpos_location);
+    glEnableVertexAttribArray(ball_GLvars.a_vcolor_location);
+    
+    glVertexAttribPointer(ball_GLvars.a_vpos_location, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
+    glVertexAttribPointer(ball_GLvars.a_vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(ball_vert)));
+}
 
 //Called everytime an animation tick happens
 void Balls::ball_update_state() {
@@ -33,6 +69,7 @@ void Balls::ball_update_state() {
 	vec2 moved;
 
 	ball_state.a_cur_location += ball_state.a_velocity * dt; // calculate new center
+    cur_location = ball_state.a_cur_location;
 
 	float x_move = old_loc.x - ball_state.a_cur_location.x;
 	float y_move = old_loc.y - ball_state.a_cur_location.y;
@@ -157,6 +194,7 @@ void Balls::ball_gl_init() {
     
     ball_state.a_cur_location = zoom(1.5, 2.0) * ball_state.a_cur_location;
     ball_state.a_cur_location += vec2(-0.3, -0.2);
+    cur_location = ball_state.a_cur_location;
     
     ball_color[0] = white;
     ball_color[1] = blue;

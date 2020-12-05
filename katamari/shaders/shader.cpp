@@ -6,4 +6,4 @@
 
 #include "shader.h"
 
-std::string shader_path = "C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/shaders/";
+std::string shader_path = "/Users/ashleychen/Desktop/graphics/Katamari-Damacy-Clone/katamari/shaders/";
