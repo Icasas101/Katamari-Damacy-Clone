@@ -37,7 +37,7 @@ void Balls::ball_update_state() {
 	float x_move = old_loc.x - ball_state.a_cur_location.x;
 	float y_move = old_loc.y - ball_state.a_cur_location.y;
 	moved = vec2(x_move, y_move);
-	for (int i = 0; i < 52; i++) {
+	for (int i = 0; i < 69; i++) {
 		ball_vert[i] += moved;
 	}
 
