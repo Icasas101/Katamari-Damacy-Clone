@@ -202,9 +202,14 @@ void animate(){
 
 	vec2 prince_loc = prince.state.cur_location;
 	vec2 shark_loc = shark.shark_state.a_cur_location;
+	vec2 kid_loc = kid.kid_state.a_cur_location;
 
 	if (abs(prince_loc.x = shark_loc.x) < 0.1 && abs(prince_loc.y - shark_loc.y) < 0.1) {
-		std::cout << "overlap";
+		std::cout << "shark overlap";
+	}
+	
+	if (abs(prince_loc.x = kid_loc.x) < 0.1 && abs(prince_loc.y - kid_loc.y) < 0.1) {
+		std::cout << "kid overlap";
 	}
 
 int main(void)
