@@ -14,6 +14,9 @@
 #include <algorithm>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <GL/gl.h>
+//#include <GL/glut.h>
+#include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
 

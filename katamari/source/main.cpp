@@ -27,6 +27,57 @@ Balls ball2;
 Balls ball3;
 //Mesh frame;
 
+// stuff for collision; copied from  http://www.swiftless.com/tutorials/opengl/collision.html
+GLfloat d;
+
+GLfloat p1x;
+GLfloat p1y;
+GLfloat p1z;
+
+const int p1radius = 1;
+const int p2radius = 0;
+
+GLfloat p2x;
+GLfloat p2y;
+GLfloat p2z;
+
+void collision() {
+	d = sqrt(((p1x - p2x) * (p1x - p2x)) + ((p1y - p2y) * (p1y - p2y)) + ((p1z - p2z) * (p1z - p2z)));
+}
+
+void pointz() {
+	glPushMatrix();
+	if (d <= p2radius + p1radius) {
+		glColor3f(1, 0, 0);
+	}
+	else {
+		glColor3f(0, 0, 1);
+	}
+	glBegin(GL_POINTS);
+	glVertex3f(p1x, p1y, p1z);
+	glEnd();
+	glPopMatrix();
+
+	glPushMatrix();
+	glColor3f(0, 1, 0);
+	glBegin(GL_POINTS);
+	glVertex3f(p2x, p2y, p2z);
+	glEnd();
+	glPopMatrix();
+}
+
+void display() {
+	glClearColor(0.0, 0.0, 0.0, 1.0);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glLoadIdentity();
+	//gluLookAt(0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+	glPointSize(5);
+	collision();
+	pointz();
+	//glutSwapBuffers();
+}
+
+
 /* -------------------------------------------------------------------------- */
 void loadFreeImageTexture(const char* lpszPathName, GLuint textureID, GLuint GLtex){
     
@@ -148,6 +199,13 @@ void animate(){
 	
 	kid.kid_update_state();
 	kid2.kid_update_state();
+
+	vec2 prince_loc = prince.state.cur_location;
+	vec2 shark_loc = shark.shark_state.a_cur_location;
+
+	if (abs(prince_loc.x = shark_loc.x) < 0.1 && abs(prince_loc.y - shark_loc.y) < 0.1) {
+		std::cout << "overlap";
+	}
   }
 }
 

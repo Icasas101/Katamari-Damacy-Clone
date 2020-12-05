@@ -14,7 +14,7 @@ Sharks::Sharks() {
 	double random_y = 0.5 - rand() / (float)RAND_MAX;
 	double random_m = rand() % 100;
 
-	shark_state.a_cur_location = vec2(0.8, 0.7);
+	shark_state.a_cur_location = vec2(0.0, 0.0);
 	shark_state.a_velocity = normalize(vec2(random_x, random_y)) * random_m / 300.0;
 	//shark_state.a_velocity = (0.0, 0.0);
 
@@ -40,6 +40,7 @@ void Sharks::shark_update_state() {
 	for (int i = 0; i < 52; i++) {
 		shark_vert[i] += moved;
 	}
+	shark_state.a_cur_location += moved;
 
 
 	//Create GPU buffer to hold vertices and color
@@ -134,6 +135,12 @@ void Sharks::shark_gl_init() {
 
 
 	size_t shark_vert_bytes = 58 * sizeof(vec2);
+
+	for (int i = 0; i < 58; i++) {
+		shark_vert[i] += vec2(0.3, 0.4);
+	}
+
+	shark_state.a_cur_location += vec2(0.3, 0.4);
 
 	shark_color[0] = blue;
 	shark_color[1] = blue;
