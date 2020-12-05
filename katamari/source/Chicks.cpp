@@ -34,14 +34,14 @@ void Chicks::chick_update_state() {
 	//Set GL state to use this buffer
 	glBindBuffer(GL_ARRAY_BUFFER, chick_GLvars.a_buffer);
     
-    vec2 *pos = new vec2[chicks.size()];
-    vec3 *col = new vec3[chicks.size()];
-    
-    for(unsigned int i=0; i < chicks.size(); i++){
-        pos[i] = *(chicks[i]->c_vert_p);
-        col[i] = *(chicks[i]->c_col_p);
-    }
-    
+//    vec2 *pos = new vec2[chicks.size()];
+//    vec3 *col = new vec3[chicks.size()];
+//
+//    for(unsigned int i=0; i < chicks.size(); i++){
+//        pos[i] = *(chicks[i]->c_vert_p);
+//        col[i] = *(chicks[i]->c_col_p);
+//    }
+//
     float dt = 1.0 / 60.0;
     vec2 old_loc  = chick_state.a_cur_location;
     vec2 moved;
@@ -57,17 +57,17 @@ void Chicks::chick_update_state() {
     
 
 	//Create GPU buffer to hold vertices and color
-    glBufferData(GL_ARRAY_BUFFER, chicks.size()*sizeof(chick_vert) + chicks.size()*sizeof(chick_color), NULL, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(chick_vert) + sizeof(chick_color), NULL, GL_STATIC_DRAW);
 	//First part of array holds vertices
-	glBufferSubData(GL_ARRAY_BUFFER, 0, chicks.size()*sizeof(chick_vert), pos);
+	glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(chick_vert), chick_vert);
 	//Second part of array hold colors (offset by sizeof(triangle))
-	glBufferSubData(GL_ARRAY_BUFFER, chicks.size()*sizeof(chick_vert), chicks.size()*sizeof(chick_color), col);
+	glBufferSubData(GL_ARRAY_BUFFER, sizeof(chick_vert), sizeof(chick_color), chick_color);
 
 	glEnableVertexAttribArray(chick_GLvars.a_vpos_location);
 	glEnableVertexAttribArray(chick_GLvars.a_vcolor_location);
 
 	glVertexAttribPointer(chick_GLvars.a_vpos_location, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
-	glVertexAttribPointer(chick_GLvars.a_vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(chicks.size()*sizeof(chick_vert)));
+	glVertexAttribPointer(chick_GLvars.a_vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(chick_vert)));
 
 
 	//glBindVertexArray(0);

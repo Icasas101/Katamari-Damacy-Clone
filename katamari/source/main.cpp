@@ -22,9 +22,9 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
   if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
     glfwSetWindowShouldClose(window, GLFW_TRUE);
   if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT))
-    prince.rotateLeft();
+    prince.moveLeft();
   if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT))
-    prince.rotateRight();
+    prince.moveRight();
   if (key == GLFW_KEY_UP && (action == GLFW_PRESS || action == GLFW_REPEAT))
 	prince.moveForward();
   if (key == GLFW_KEY_DOWN && (action == GLFW_PRESS || action == GLFW_REPEAT))
@@ -37,10 +37,16 @@ void init(){
 
   glHint (GL_LINE_SMOOTH_HINT, GL_NICEST);
   glHint (GL_POINT_SMOOTH_HINT, GL_NICEST);
-  prince.gl_init();
-  chick.chick_gl_init();
+  
   room.room_gl_init();
   frame.mesh_gl_init();
+  prince.gl_init();
+  chick.chick_gl_init();
+  shark.shark_gl_init();
+  ball.ball_gl_init();
+  lego.lego_gl_init();
+  kid.kid_gl_init();
+  
 
 
 }
@@ -51,7 +57,6 @@ void animate(){
 	  glfwSetTime(0.0);
 
 	chick.chick_update_state();
-
 
   }
 }
@@ -101,10 +106,15 @@ int main(void)
     
     glClear(GL_COLOR_BUFFER_BIT);
     
+    room.room_draw(proj);
+    frame.mesh_draw(width, height);
     prince.draw(proj);
 	chick.chick_draw(proj);
-	room.room_draw(proj);
-	frame.mesh_draw(width, height);
+    shark.shark_draw(proj);
+    ball.ball_draw(proj);
+    lego.lego_draw(proj);
+    kid.kid_draw(proj);
+	
     
     glfwSwapBuffers(window);
     glfwPollEvents();
