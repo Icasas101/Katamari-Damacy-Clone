@@ -43,6 +43,12 @@ GLfloat p2x;
 GLfloat p2y;
 GLfloat p2z;
 
+std::vector < unsigned int > num_points;
+bool inside;
+int current_object = 0;
+
+
+
 void collision() {
 	d = sqrt(((p1x - p2x) * (p1x - p2x)) + ((p1y - p2y) * (p1y - p2y)) + ((p1z - p2z) * (p1z - p2z)));
 }
@@ -192,8 +198,6 @@ void init(){
   
   obs_locs.push_back(kid.kid_state.a_cur_location);
   obs_locs.push_back(kid2.kid_state.a_cur_location);
-  
-
 
 }
 
@@ -227,22 +231,62 @@ void check_collision() {
 //      std::cout << "overlap\n";
 //    }
 //  }
-  if (abs(katamari_loc.x - chick_loc.x) < 0.01 && abs(katamari_loc.y - chick_loc.y) < 0.01) {
+// # of vertices == # of edges
+	  // chick stuff
+	  //num_points[0] = 52;
+	  //int num_edges = num_points[0];
+	  //int in_strip = 0;
+	  //double x_cross;
+
+	  //vec2 p1 = objects[current_object][0];
+	  //for (int i = 1; i <= num_edges; i++) {
+		 // vec2 p2 = objects[current_object][i % num_edges];
+
+		 // //Checking if y of cursor is within bounds of y of edge
+		 // if (point.y > (p1.y < p2.y ? p1.y : p2.y) && (point.y <= (p1.y > p2.y ? p1.y : p2.y))) {
+
+			//  //Checking if x of cursor is less than max of x of edge and if edge is not horizontal
+			//  if (point.x <= (p1.x > p2.x ? p1.x : p2.x) && (p1.y != p2.y)) {
+			//	  x_cross = (point.y - p1.y) * (p2.x - p1.x) / (p2.y - p1.y) + p1.x;
+			//	  if ((p1.x == p2.x) || (point.x <= x_cross)) {
+			//		  in_strip++;
+			//	  }
+			//  }
+		 // }
+		 // //swap
+		 // else {
+			//  p1 = p2;
+		 // }
+	  //}
+
+	  //if (in_strip % 2 == 0) {
+		 // inside = false; // even number of in_strip means it's outside of the polygon
+	  //}
+	  //else {
+		 // inside = true;
+	  //}
+  if (((katamari_loc.x - chick_loc.x) < 0.05 && (katamari_loc.x - chick_loc.x) > -0.05) || ((katamari_loc.y - chick_loc.y) < 0.05 && (katamari_loc.y - chick_loc.y) > -0.05)) {
+	  chick.chick_state.a_velocity = (vec2(0.0, 0.0));
       std::cout << "overlap c1\n";
   }
-  if (abs(katamari_loc.x - chick2_loc.x) < 0.01 && abs(katamari_loc.y - chick2_loc.y) < 0.01) {
+  if (((katamari_loc.x - chick2_loc.x) < 0.05 && (katamari_loc.x - chick2_loc.x) > -0.05) || ((katamari_loc.y - chick2_loc.y) < 0.05 && (katamari_loc.y - chick2_loc.y) > -0.05)) {
+	  chick2.chick_state.a_velocity = (vec2(0.0, 0.0));
     std::cout << "overlap c2\n";
   }
-  if (abs(katamari_loc.x - chick3_loc.x) < 0.01 && abs(katamari_loc.y - chick3_loc.y) < 0.01) {
+  if (((katamari_loc.x - chick3_loc.x) < 0.05 && (katamari_loc.x - chick3_loc.x) > -0.05) || ((katamari_loc.y - chick3_loc.y) < 0.05 && (katamari_loc.y - chick3_loc.y) > -0.05)) {
+	  chick3.chick_state.a_velocity = (vec2(0.0, 0.0));
     std::cout << "overlap c3\n";
   }
-  if (abs(katamari_loc.x - chick4_loc.x) < 0.01 && abs(katamari_loc.y - chick4_loc.y) < 0.01) {
+  if (((katamari_loc.x - chick4_loc.x) < 0.05 && (katamari_loc.x - chick4_loc.x) > -0.05) || ((katamari_loc.y - chick4_loc.y) < 0.05 && (katamari_loc.y - chick4_loc.y) > -0.05)) {
+	  chick4.chick_state.a_velocity = (vec2(0.0, 0.0));
     std::cout << "overlap c4\n";
   }
-  if (abs(katamari_loc.x - chick5_loc.x) < 0.01 && abs(katamari_loc.y - chick5_loc.y) < 0.01) {
+  if (((katamari_loc.x - chick5_loc.x) < 0.05 && (katamari_loc.x - chick5_loc.x) > -0.05) || ((katamari_loc.y - chick5_loc.y) < 0.05 && (katamari_loc.y - chick5_loc.y) > -0.05)) {
+	  chick5.chick_state.a_velocity = (vec2(0.0, 0.0));
     std::cout << "overlap c5\n";
   }
-  if (abs(katamari_loc.x - chick6_loc.x) < 0.01 && abs(katamari_loc.y - chick6_loc.y) < 0.01) {
+  if (((katamari_loc.x - chick6_loc.x) < 0.05 && (katamari_loc.x - chick6_loc.x) > -0.05) || ((katamari_loc.y - chick6_loc.y) < 0.05 && (katamari_loc.y - chick6_loc.y) > -0.05)) {
+	  chick6.chick_state.a_velocity = (vec2(0.0, 0.0));
     std::cout << "overlap c6\n";
   }
   
@@ -279,8 +323,8 @@ void animate(){
 
     kid.kid_update_state();
     kid2.kid_update_state();
-    
-    check_collision();
+
+	check_collision();
     
 //    std::vector< vec2 > obs_locs;
 //
@@ -390,7 +434,7 @@ int main(void)
     kid.kid_draw(proj);
 	kid2.kid_draw(proj);
     prince.draw(proj);
-	
+
     
     glfwSwapBuffers(window);
     glfwPollEvents();

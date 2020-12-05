@@ -1,7 +1,6 @@
-/Users/ashleychen/Desktop/graphics/Katamari-Damacy-Clone/katamari/build/CMakeFiles/katamari.dir
-/Users/ashleychen/Desktop/graphics/Katamari-Damacy-Clone/katamari/build/CMakeFiles/glad.dir
-/Users/ashleychen/Desktop/graphics/Katamari-Damacy-Clone/katamari/build/CMakeFiles/ALL_BUILD.dir
-/Users/ashleychen/Desktop/graphics/Katamari-Damacy-Clone/katamari/build/CMakeFiles/ZERO_CHECK.dir
-/Users/ashleychen/Desktop/graphics/Katamari-Damacy-Clone/katamari/build/glfw-3.2/CMakeFiles/ALL_BUILD.dir
-/Users/ashleychen/Desktop/graphics/Katamari-Damacy-Clone/katamari/build/glfw-3.2/CMakeFiles/ZERO_CHECK.dir
-/Users/ashleychen/Desktop/graphics/Katamari-Damacy-Clone/katamari/build/glfw-3.2/src/CMakeFiles/glfw.dir
+C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/CMakeFiles/glad.dir
+C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/CMakeFiles/katamari.dir
+C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/glfw-3.2/CMakeFiles/ALL_BUILD.dir
+C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/glfw-3.2/src/CMakeFiles/glfw.dir

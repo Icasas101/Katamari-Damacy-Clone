@@ -1,0 +1,10 @@
+^C:\USERS\ISABE\DOCUMENTS\GITHUB\KATAMARI-DAMACY-CLONE\KATAMARI\BUILD\CMAKEFILES\A97E3D2649F138340D7D0BFE46564805\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari -BC:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Isabe/Documents/GitHub/Katamari-Damacy-Clone/katamari/build/KATAMARI.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
