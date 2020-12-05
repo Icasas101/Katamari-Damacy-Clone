@@ -23,6 +23,22 @@ class Kids : public Obstacle {
 	vec2 kid_vert[56];
 	vec3 kid_color[56];
 
+	//OpenGL variables for a ship
+	struct {
+		GLuint a_vao;           //Vertex array object
+		GLuint a_program;       //shader program
+		GLuint a_buffer;        //Vertex buffer objects
+		GLuint a_vertex_shader, a_fragment_shader;  //Shaders
+		GLint a_vpos_location, a_vcolor_location;   //reference to pos and color in shaders
+		GLint a_M_location;     //Reference to matrix in shader
+	} kid_GLvars;
+
+
+public:
+
+
+	Kids();
+	
 	//Record of the kid's state
 	struct {
 		vec2 a_cur_location;   //Current position of the center
@@ -41,22 +57,6 @@ class Kids : public Obstacle {
 		}
 		vec2 a_velocity;       //Velocity
 	} kid_state;
-
-	//OpenGL variables for a ship
-	struct {
-		GLuint a_vao;           //Vertex array object
-		GLuint a_program;       //shader program
-		GLuint a_buffer;        //Vertex buffer objects
-		GLuint a_vertex_shader, a_fragment_shader;  //Shaders
-		GLint a_vpos_location, a_vcolor_location;   //reference to pos and color in shaders
-		GLint a_M_location;     //Reference to matrix in shader
-	} kid_GLvars;
-
-
-public:
-
-
-	Kids();
 
 	mat4 kid_move;
 
