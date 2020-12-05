@@ -34,24 +34,7 @@ class Prince{
     
     vec3 black = vec3(0.0, 0.0, 0.0);
     vec3 white = vec3(1.0,1.0, 1.0);
-  
-  //Record of the ship's state
-  struct {
-    vec2 cur_location;   //Current position of the center
-    float angle;         //Rotation angle
-    vec2 pointing;       //Vector pointing to the front of the prince
-    //This function will be helpful to keep track of the direction the prince
-    //is pointing
-    mat2 RotateZ2D( const GLfloat theta ){
-      GLfloat angle = DegreesToRadians * theta;
-      mat2 c;
-      c[0][0] = c[1][1] = cos(angle);
-      c[1][0] = sin(angle);
-      c[0][1] = -c[1][0];
-      return c;
-    }
-    vec2 velocity;       //Velocity
-  } state;
+ 
   
   //OpenGL variables for a prince
   struct {
@@ -68,6 +51,23 @@ public:
   
 
   Prince();
+
+  struct {
+	  vec2 cur_location;   //Current position of the center
+	  float angle;         //Rotation angle
+	  vec2 pointing;       //Vector pointing to the front of the prince
+	  //This function will be helpful to keep track of the direction the prince
+	  //is pointing
+	  mat2 RotateZ2D(const GLfloat theta) {
+		  GLfloat angle = DegreesToRadians * theta;
+		  mat2 c;
+		  c[0][0] = c[1][1] = cos(angle);
+		  c[1][0] = sin(angle);
+		  c[0][1] = -c[1][0];
+		  return c;
+	  }
+	  vec2 velocity;       //Velocity
+  } state;
  
   mat4 m1;
 

@@ -110,8 +110,6 @@ void animate(){
 	
 	kid.kid_update_state();
 	kid2.kid_update_state();
-
-
   }
 }
 

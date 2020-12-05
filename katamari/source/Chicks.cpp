@@ -266,7 +266,7 @@ void Chicks::chick_gl_init() {
 
 }
 
-//Draw an chick
+//Draw a chick
 void Chicks::chick_draw(mat4 proj) {
 
 	glUseProgram(chick_GLvars.a_program);
