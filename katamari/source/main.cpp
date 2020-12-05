@@ -1,4 +1,5 @@
 #include "common.h"
+#include "lodepng.h"
 
 using namespace Angel;
 
@@ -25,6 +26,43 @@ Balls ball;
 Balls ball2;
 Balls ball3;
 //Mesh frame;
+
+/* -------------------------------------------------------------------------- */
+void loadFreeImageTexture(const char* lpszPathName, GLuint textureID, GLuint GLtex){
+    
+    std::vector<unsigned char> image;
+    unsigned int width;
+    unsigned int height;
+    //decode
+    unsigned error = lodepng::decode(image, width, height, lpszPathName, LCT_RGBA, 8);
+    
+    //if there's an error, display it
+    if(error){
+        std::cout << "decoder error " << error;
+        std::cout << ": " << lodepng_error_text(error) << std::endl;
+        return;
+    }
+    
+    /* the image "shall" be in RGBA_U8 format */
+    
+    std::cout << "Image loaded: " << width << " x " << height << std::endl;
+    std::cout << image.size() << " pixels.\n";
+    std::cout << "Image has " << image.size()/(width*height) << "color values per pixel.\n";
+    
+    GLint GL_format = GL_RGBA;
+    
+    glActiveTexture( GLtex );
+    glBindTexture( GL_TEXTURE_2D, textureID );
+    glTexImage2D( GL_TEXTURE_2D, 0, GL_format, width, height, 0, GL_format, GL_UNSIGNED_BYTE, &image[0] );
+    glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT );
+    glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );
+    glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
+    glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
+    glGenerateMipmap(GL_TEXTURE_2D);
+    
+    //Put things away and free memory
+    image.clear();
+}
 
 
 static void error_callback(int error, const char* description)

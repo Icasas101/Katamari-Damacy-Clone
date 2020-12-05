@@ -153,7 +153,7 @@ bool Mesh::loadOBJ(const char* path, std::vector <vec3>& out_vertices, std::vect
 		 //}
 
 		 //delete[] line;
-		delete[] lineHeader;
+		//delete[] lineHeader;
 
 		//    std::cout << "Read " << temp_vertices.size() << " vertices\n";
 		//    std::cout << "Read " << temp_normals.size() << " normals\n";
