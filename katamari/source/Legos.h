@@ -20,8 +20,8 @@
 class Legos : public Obstacle {
 
 	//Placeholders so everything compiles.  Customize for your ship
-	vec2 lego_vert[52];
-	vec3 lego_color[52];
+	vec2 lego_vert[49];
+	vec3 lego_color[49];
 
 	//Record of the lego's state
 	struct {
