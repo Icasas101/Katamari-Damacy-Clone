@@ -16,8 +16,8 @@ Chicks::Chicks() {
       double random_y = 0.5 - rand() / (float)RAND_MAX;
       double random_m = rand() % 100;
   
-      chick_state.a_cur_location = vec2(0.5, 0.5);
-      chick_state.a_velocity = normalize(vec2(random_x, random_y)) * random_m/300.0;
+      chick_state.a_cur_location = vec2(0.0, 0.0);
+      chick_state.a_velocity = normalize(vec2(random_x, random_y)) * random_m/150.0;
       //chick_state.a_velocity = (0.3, -0.2);
 
 };
@@ -53,10 +53,11 @@ void Chicks::chick_update_state() {
     moved = vec2(x_move, y_move);
     for (int i = 0; i < 52; i++) {
         chick_vert[i] += moved;
-		if (chick_state.a_cur_location.x >= 1.0 || chick_state.a_cur_location.x <= -0.5 || chick_state.a_cur_location.y >= 1.0 || chick_state.a_cur_location.y <= -1.0) {
-			chick_state.a_velocity = (chick_state.a_velocity * -0.8);
-			chick_state.a_cur_location += chick_state.a_velocity * dt;
-		}
+    }
+    
+    if (chick_state.a_cur_location.x > 1.4 || chick_state.a_cur_location.x < -3.5 || chick_state.a_cur_location.y > 2.5 || chick_state.a_cur_location.y < -2.5) {
+        chick_state.a_velocity = (chick_state.a_velocity * -0.8);
+//        chick_state.a_cur_location += chick_state.a_velocity * dt;
     }
     
 
@@ -146,6 +147,11 @@ void Chicks::chick_gl_init() {
 
   
 	size_t chick_vert_bytes = 52 * sizeof(vec2);
+    for (int i = 0; i < 52; i++) {
+        chick_vert[i] += vec2(-0.1, -0.2);
+    }
+    
+    chick_state.a_cur_location += vec2(-0.1, -0.2);
 
 	chick_color[0] = yellow;
 	chick_color[1] = yellow;

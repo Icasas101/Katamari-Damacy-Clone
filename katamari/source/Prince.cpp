@@ -13,20 +13,45 @@ Prince::Prince(){
       state.cur_location = vec2(0.0, 0.0);
       state.pointing = vec2(0.0, 0.15);
 	  state.velocity = normalize(vec2(0.5, 0.5)) * 3.0;
+      state.katamari = vec2(0.185, 0.095);
 };
 
 
 //Called everytime an animation tick happens
 void Prince::update_state(){
-  vec2 accel = state.pointing - state.cur_location;
-  vec2 new_velocity;
-  float dt = 1.0/60.0;
   
   glBindVertexArray(GLvars.vao);
-  
   glBindBuffer(GL_ARRAY_BUFFER, GLvars.buffer);
   
+//  vec2 accel = state.pointing - state.cur_location;
+//  vec2 new_velocity;
+//  float dt = 1.0/60.0;
   
+  state.cur_location += state.moved; // calculate new prince center
+  state.katamari += state.moved; // calculate new katamari center
+  
+//  std::cout << "prince at " << state.cur_location << "\n";
+//  std::cout << "katamari at " << state.katamari << "\n";
+  
+//  float x_move = old_loc.x - state.cur_location.x;
+//  float y_move = old_loc.y - state.cur_location.y;
+//  move = vec2(x_move, y_move);
+  for (int i = 0; i < 60; i++) {
+    prince_vert[i] += state.moved;
+  }
+  
+  //Create GPU buffer to hold vertices and color
+  glBufferData( GL_ARRAY_BUFFER, sizeof(prince_vert) + sizeof(prince_color), NULL, GL_STATIC_DRAW );
+  //First part of array holds vertices
+  glBufferSubData( GL_ARRAY_BUFFER, 0, sizeof(prince_vert), prince_vert );
+  //Second part of array hold colors (offset by sizeof(triangle))
+  glBufferSubData( GL_ARRAY_BUFFER, sizeof(prince_vert), sizeof(prince_color), prince_color );
+  
+  glEnableVertexAttribArray(GLvars.vpos_location);
+  glEnableVertexAttribArray(GLvars.vcolor_location );
+  
+  glVertexAttribPointer( GLvars.vpos_location, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0) );
+  glVertexAttribPointer( GLvars.vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(prince_vert)) );
 
 
   
@@ -49,7 +74,7 @@ void Prince::gl_init(){
   //Prince
   //!!!!!!!!Populate prince_vert and prince_color
     
-  state.cur_location = vec2(0.0, 0.0);
+  state.cur_location = vec2(0.08, 0.09);
   state.pointing = vec2(0.0, 0.15);
 
     prince_vert[0] = vec2(0.08, 0.03);
@@ -118,8 +143,12 @@ void Prince::gl_init(){
     prince_vert[54] = vec2(0.07, 0.13);
     prince_vert[55] = vec2(0.09, 0.13);
     
+    prince_vert[56] = vec2(0.18, 0.09);
+    prince_vert[57] = vec2(0.18, 0.1);
+    prince_vert[58] = vec2(0.19, 0.09);
+    prince_vert[59] = vec2(0.19, 0.1);
     
-    size_t prince_vert_bytes = 56 * sizeof(vec2);
+    size_t prince_vert_bytes = 60 * sizeof(vec2);
     
     prince_color[0] = orange;
     prince_color[1] = yellow;
@@ -187,9 +216,14 @@ void Prince::gl_init(){
     prince_color[54] = purple;
     prince_color[55] = purple;
     
+    prince_color[56] = white;
+    prince_color[57] = white;
+    prince_color[58] = white;
+    prince_color[59] = white;
     
-    
-    size_t prince_color_bytes = 56 * sizeof(vec3);
+    size_t prince_color_bytes = 60 * sizeof(vec3);
+  
+  
   
   std::string vshader = shader_path + "vshader_Prince.glsl";
   std::string fshader = shader_path + "fshader_Prince.glsl";
@@ -257,10 +291,10 @@ void Prince::draw(mat4 proj){
   vec2 new_velocity;
   float dt = 1.0 / 60.0;
   //If you have a modelview matrix, pass it with proj
-  glUniformMatrix4fv( GLvars.M_location, 1, GL_TRUE, proj*m1*Scale(0.8, 1.2, 0.8));
+  glUniformMatrix4fv( GLvars.M_location, 1, GL_TRUE, proj * Scale(0.8, 1.2, 0.8));
   
   glPointSize(6.0);
-  glDrawArrays(GL_POINTS, 0, 56);
+  glDrawArrays(GL_POINTS, 0, 60);
   
   glBindVertexArray(0);
   glUseProgram(0);

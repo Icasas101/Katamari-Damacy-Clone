@@ -26,25 +26,6 @@ class Chicks : public Obstacle {
     vec2* c_vert_p = chick_vert;
     vec3* c_col_p = chick_color;
 
-	//Record of the chick's state
-	struct {
-		vec2 a_cur_location;   //Current position of the center
-		float a_angle;         //Rotation angle
-		vec2 a_pointing;       //Vector pointing to the front of the ship
-		//This function will be helpful to keep track of the direction the ship
-		//is pointing
-		vec2 a_accel;
-		mat2 a_RotateZ2D(const GLfloat theta) {
-			GLfloat angle = DegreesToRadians * theta;
-			mat2 c;
-			c[0][0] = c[1][1] = cos(angle);
-			c[1][0] = sin(angle);
-			c[0][1] = -c[1][0];
-			return c;
-		}
-		vec2 a_velocity;       //Velocity
-	} chick_state;
-
 	//OpenGL variables for a ship
 	struct {
 		GLuint a_vao;           //Vertex array object
@@ -60,6 +41,26 @@ public:
 
 
 	Chicks();
+    
+    //Record of the chick's state
+    struct {
+        vec2 a_cur_location;   //Current position of the center
+        float a_angle;         //Rotation angle
+        vec2 a_pointing;       //Vector pointing to the front of the ship
+        //This function will be helpful to keep track of the direction the ship
+        //is pointing
+        vec2 a_accel;
+        mat2 a_RotateZ2D(const GLfloat theta) {
+            GLfloat angle = DegreesToRadians * theta;
+            mat2 c;
+            c[0][0] = c[1][1] = cos(angle);
+            c[1][0] = sin(angle);
+            c[0][1] = -c[1][0];
+            return c;
+        }
+        vec2 a_velocity;       //Velocity
+    } chick_state;
+
 
 	mat4 chick_move;
 

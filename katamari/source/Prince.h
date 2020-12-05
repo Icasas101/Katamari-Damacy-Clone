@@ -19,8 +19,8 @@
 class Prince{
 
   //Placeholders so everything compiles.  Customize for your ship
-  vec2 prince_vert[56];
-  vec3 prince_color[56];
+  vec2 prince_vert[60];
+  vec3 prince_color[60];
     
     vec3 yellow = vec3(1.0, 0.85, 0.41);
     vec3 orange = vec3(0.97, 0.44, 0.30);
@@ -67,32 +67,30 @@ public:
 		  return c;
 	  }
 	  vec2 velocity;       //Velocity
+      vec2 katamari;
+      vec2 moved;
   } state;
  
   mat4 m1;
 
   inline void moveLeft() {
-    //Do something
-	  // update geometry here and change direction it's pointing
-    m1 *= Translate(-0.1, 0.0, 0.0);
-    state.pointing = state.RotateZ2D(-30) * state.pointing;
+      state.moved = vec2(-0.03, 0.0);
+      update_state();
     
   }
   inline void moveRight(){
-    //Do something
-    m1 *= Translate(0.1, 0.0, 0.0);
-    state.pointing = state.RotateZ2D(30) * state.pointing;
-    
+      state.moved = vec2(0.03, 0.0);
+      update_state();
   }
 
   inline void moveForward() {
-	  m1 *= Translate(0.0, -0.1, 0.0);
-	  state.pointing = state.RotateZ2D(0) * state.pointing;
+      state.moved = vec2(0.0, -0.03);
+      update_state();
   }
     
   inline void moveDown() {
-    m1 *= Translate(0.0, 0.1, 0.0);
-    state.pointing = state.RotateZ2D(0) * state.pointing;
+      state.moved = vec2(0.0, 0.03);
+      update_state();
   }
 
   void update_state();

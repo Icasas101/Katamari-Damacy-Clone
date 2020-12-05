@@ -14,7 +14,7 @@ Balls::Balls() {
 	double random_y = 0.5 - rand() / (float)RAND_MAX;
 	double random_m = rand() % 100;
 
-	ball_state.a_cur_location = vec2(0.25, 0.25);
+	ball_state.a_cur_location = vec2(0.0, 0.0);
 	ball_state.a_velocity = normalize(vec2(random_x, random_y)) * random_m / 300.0;
 	//ball_state.a_velocity = (0.0, 0.0);
 
@@ -40,6 +40,10 @@ void Balls::ball_update_state() {
 	for (int i = 0; i < 69; i++) {
 		ball_vert[i] += moved;
 	}
+    if (ball_state.a_cur_location.x > 1.4 || ball_state.a_cur_location.x < -3.5 || ball_state.a_cur_location.y > 2.5 || ball_state.a_cur_location.y < -2.5) {
+        ball_state.a_velocity = (ball_state.a_velocity * -1.5);
+        //        ball_state.a_cur_location += ball_state.a_velocity * dt;
+    }
 
 
 	//Create GPU buffer to hold vertices and color
@@ -145,6 +149,12 @@ void Balls::ball_gl_init() {
     
     
     size_t ball_vert_bytes = 69 * sizeof(vec2);
+    
+    for (int i = 0; i < 69; i++) {
+        ball_vert[i] += vec2(-0.3, 0.1);
+    }
+    
+    ball_state.a_cur_location += vec2(-0.3, -0.2);
     
     ball_color[0] = white;
     ball_color[1] = blue;
@@ -295,7 +305,7 @@ void Balls::ball_draw(mat4 proj) {
 	//    mat4 M4 = (Translate(-0.915,0.5,0) * RotateZ(-45) * Scale(2));
 
 		//If you have a modelview matrix, pass it with proj
-	glUniformMatrix4fv(ball_GLvars.a_M_location, 1, GL_TRUE, proj * Translate(0.5, 0.7, 0.0) * Scale(1.5, 2.0, 1.5));
+	glUniformMatrix4fv(ball_GLvars.a_M_location, 1, GL_TRUE, proj * Scale(1.5, 2.0, 1.5));
 
 	glPointSize(8.0);
 	glDrawArrays(GL_POINTS, 0, 69);

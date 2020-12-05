@@ -40,7 +40,10 @@ void Sharks::shark_update_state() {
 	for (int i = 0; i < 58; i++) {
 		shark_vert[i] += moved;
 	}
-	shark_state.a_cur_location += moved;
+    if (shark_state.a_cur_location.x > 1.4 || shark_state.a_cur_location.x < -3.5 || shark_state.a_cur_location.y > 2.5 || shark_state.a_cur_location.y < -2.5) {
+        shark_state.a_velocity = (shark_state.a_velocity * -0.8);
+        //        shark_state.a_cur_location += shark_state.a_velocity * dt;
+    }
 
 
 	//Create GPU buffer to hold vertices and color
@@ -281,7 +284,7 @@ void Sharks::shark_draw(mat4 proj) {
 	//    mat4 M4 = (Translate(-0.915,0.5,0) * RotateZ(-45) * Scale(2));
 
 		//If you have a modelview matrix, pass it with proj
-	glUniformMatrix4fv(shark_GLvars.a_M_location, 1, GL_TRUE, proj * Translate(0.5, -0.7, 0.0) * Scale(1.2));
+	glUniformMatrix4fv(shark_GLvars.a_M_location, 1, GL_TRUE, proj * Scale(1.2));
 
     glPointSize(7.0);
     glDrawArrays(GL_POINTS, 0, 58);

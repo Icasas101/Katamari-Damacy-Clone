@@ -14,7 +14,7 @@ Kids::Kids() {
 	double random_y = 0.5 - rand() / (float)RAND_MAX;
 	double random_m = rand() % 100;
 
-	kid_state.a_cur_location = vec2(0.5, 0.5);
+	kid_state.a_cur_location = vec2(0.0, 0.0);
 	kid_state.a_velocity = normalize(vec2(random_x, random_y)) * random_m / 300.0;
 	//kid_state.a_velocity = (0.0, 0.0);
 
@@ -40,6 +40,11 @@ void Kids::kid_update_state() {
 	for (int i = 0; i < 56; i++) {
 		kid_vert[i] += moved;
 	}
+    if (kid_state.a_cur_location.x > 1.4 || kid_state.a_cur_location.x < -3.5 || kid_state.a_cur_location.y > 2.5 || kid_state.a_cur_location.y < -2.5) {
+        kid_state.a_velocity = (kid_state.a_velocity * -0.8);
+        //        kid_state.a_cur_location += kid_state.a_velocity * dt;
+    }
+    std::cout << "kid at " << kid_state.a_cur_location << "\n";
 
 
 	//Create GPU buffer to hold vertices and color
@@ -133,6 +138,12 @@ void Kids::kid_gl_init() {
     
     
     size_t kid_vert_bytes = 56 * sizeof(vec2);
+    
+    for (int i = 0; i < 56; i++) {
+        kid_vert[i] += vec2(0.2, -0.1);
+    }
+    
+    kid_state.a_cur_location += vec2(0.2, -0.1);
     
     kid_color[0] = pink;
     kid_color[1] = pink;
@@ -271,7 +282,7 @@ void Kids::kid_draw(mat4 proj) {
 	//    mat4 M4 = (Translate(-0.915,0.5,0) * RotateZ(-45) * Scale(2));
 
 		//If you have a modelview matrix, pass it with proj
-	glUniformMatrix4fv(kid_GLvars.a_M_location, 1, GL_TRUE, proj * Translate(-0.5, 0.5, 0.0) * Scale(2.7, 3.0, 2.7));
+	glUniformMatrix4fv(kid_GLvars.a_M_location, 1, GL_TRUE, proj * Scale(2.7, 3.0, 2.7));
 
 	glPointSize(15.0);
 	glDrawArrays(GL_POINTS, 0, 56);

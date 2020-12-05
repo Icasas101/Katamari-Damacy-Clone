@@ -25,6 +25,8 @@ Sharks shark4;
 Balls ball;
 Balls ball2;
 Balls ball3;
+
+std::vector< vec2 > obs_locs;
 //Mesh frame;
 
 // stuff for collision; copied from  http://www.swiftless.com/tutorials/opengl/collision.html
@@ -166,51 +168,157 @@ void init(){
   kid.kid_gl_init();
   kid2.kid_gl_init();
   
+  obs_locs.push_back(chick.chick_state.a_cur_location);
+  obs_locs.push_back(chick2.chick_state.a_cur_location);
+  obs_locs.push_back(chick3.chick_state.a_cur_location);
+  obs_locs.push_back(chick4.chick_state.a_cur_location);
+  obs_locs.push_back(chick5.chick_state.a_cur_location);
+  obs_locs.push_back(chick6.chick_state.a_cur_location);
+  
+  obs_locs.push_back(shark.shark_state.a_cur_location);
+  obs_locs.push_back(shark2.shark_state.a_cur_location);
+  obs_locs.push_back(shark3.shark_state.a_cur_location);
+  obs_locs.push_back(shark4.shark_state.a_cur_location);
+  
+  obs_locs.push_back(ball.ball_state.a_cur_location);
+  obs_locs.push_back(ball2.ball_state.a_cur_location);
+  obs_locs.push_back(ball3.ball_state.a_cur_location);
+  
+  obs_locs.push_back(lego.lego_state.a_cur_location);
+  obs_locs.push_back(lego2.lego_state.a_cur_location);
+  obs_locs.push_back(lego3.lego_state.a_cur_location);
+  obs_locs.push_back(lego4.lego_state.a_cur_location);
+  obs_locs.push_back(lego5.lego_state.a_cur_location);
+  
+  obs_locs.push_back(kid.kid_state.a_cur_location);
+  obs_locs.push_back(kid2.kid_state.a_cur_location);
+  
 
 
 }
 
+//std::vector< vec2 > testi;
+
+void check_collision() {
+  
+  
+  vec2 katamari_loc = prince.state.katamari;
+//  vec2 shark_loc = shark.shark_state.a_cur_location;
+//  vec2 kid_loc = kid.kid_state.a_cur_location;
+  
+  
+  
+      vec2 chick_loc = chick.chick_state.a_cur_location;
+      vec2 chick2_loc = chick2.chick_state.a_cur_location;
+      vec2 chick3_loc = chick3.chick_state.a_cur_location;
+      vec2 chick4_loc = chick4.chick_state.a_cur_location;
+      vec2 chick5_loc = chick5.chick_state.a_cur_location;
+      vec2 chick6_loc = chick6.chick_state.a_cur_location;
+  
+//  obs_locs.push_back(chick.chick_state.a_cur_location);
+//  obs_locs.push_back(chick2.chick_state.a_cur_location);
+//  obs_locs.push_back(chick3.chick_state.a_cur_location);
+//  obs_locs.push_back(chick4.chick_state.a_cur_location);
+//  obs_locs.push_back(chick5.chick_state.a_cur_location);
+//  obs_locs.push_back(chick6.chick_state.a_cur_location);
+  
+//  for (int i = 0; i < obs_locs.size(); i++) {
+//    if (abs(katamari_loc.x - obs_locs[i].x) < 0.01 && abs(katamari_loc.y - obs_locs[i].y) < 0.01) {
+//      std::cout << "overlap\n";
+//    }
+//  }
+  if (abs(katamari_loc.x - chick_loc.x) < 0.01 && abs(katamari_loc.y - chick_loc.y) < 0.01) {
+      std::cout << "overlap c1\n";
+  }
+  if (abs(katamari_loc.x - chick2_loc.x) < 0.01 && abs(katamari_loc.y - chick2_loc.y) < 0.01) {
+    std::cout << "overlap c2\n";
+  }
+  if (abs(katamari_loc.x - chick3_loc.x) < 0.01 && abs(katamari_loc.y - chick3_loc.y) < 0.01) {
+    std::cout << "overlap c3\n";
+  }
+  if (abs(katamari_loc.x - chick4_loc.x) < 0.01 && abs(katamari_loc.y - chick4_loc.y) < 0.01) {
+    std::cout << "overlap c4\n";
+  }
+  if (abs(katamari_loc.x - chick5_loc.x) < 0.01 && abs(katamari_loc.y - chick5_loc.y) < 0.01) {
+    std::cout << "overlap c5\n";
+  }
+  if (abs(katamari_loc.x - chick6_loc.x) < 0.01 && abs(katamari_loc.y - chick6_loc.y) < 0.01) {
+    std::cout << "overlap c6\n";
+  }
+  
+}
+
 //Call update function 30 times a second
 void animate(){
-  if(glfwGetTime() > 0.033){
-	  glfwSetTime(0.0);
+  if(glfwGetTime() > 0.015){
+    glfwSetTime(0.0);
+    
+    //prince.update_state();
+      
+    chick.chick_update_state();
+    chick2.chick_update_state();
+    chick3.chick_update_state();
+    chick4.chick_update_state();
+    chick5.chick_update_state();
+    chick6.chick_update_state();
 
-	chick.chick_update_state();
-	chick2.chick_update_state();
-	chick3.chick_update_state();
-	chick4.chick_update_state();
-	chick5.chick_update_state();
-	chick6.chick_update_state();
+    lego.lego_update_state();
+    lego2.lego_update_state();
+    lego3.lego_update_state();
+    lego4.lego_update_state();
+    lego5.lego_update_state();
 
-	lego.lego_update_state();
-	lego2.lego_update_state();
-	lego3.lego_update_state();
-	lego4.lego_update_state();
-	lego5.lego_update_state();
+    shark.shark_update_state();
+    shark2.shark_update_state();
+    shark3.shark_update_state();
+    shark4.shark_update_state();
 
-	shark.shark_update_state();
-	shark2.shark_update_state();
-	shark3.shark_update_state();
-	shark4.shark_update_state();
+    ball.ball_update_state();
+    ball2.ball_update_state();
+    ball3.ball_update_state();
 
-	ball.ball_update_state();
-	ball2.ball_update_state();
-	ball3.ball_update_state();
-	
-	kid.kid_update_state();
-	kid2.kid_update_state();
+    kid.kid_update_state();
+    kid2.kid_update_state();
+    
+    check_collision();
+    
+//    std::vector< vec2 > obs_locs;
+//
+//  vec2 katamari_loc = prince.state.katamari;
+//  vec2 shark_loc = shark.shark_state.a_cur_location;
+//  vec2 kid_loc = kid.kid_state.a_cur_location;
+//
+//
+//
+////    vec2 chick_loc = chick.chick_state.a_cur_location;
+////    vec2 chick2_loc = chick2.chick_state.a_cur_location;
+////    vec2 chick3_loc = chick3.chick_state.a_cur_location;
+////    vec2 chick4_loc = chick4.chick_state.a_cur_location;
+////    vec2 chick5_loc = chick5.chick_state.a_cur_location;
+////    vec2 chick6_loc = chick6.chick_state.a_cur_location;
+//
+//    obs_locs.push_back(chick.chick_state.a_cur_location);
+//    obs_locs.push_back(chick2.chick_state.a_cur_location);
+//    obs_locs.push_back(chick3.chick_state.a_cur_location);
+//    obs_locs.push_back(chick4.chick_state.a_cur_location);
+//    obs_locs.push_back(chick5.chick_state.a_cur_location);
+//    obs_locs.push_back(chick6.chick_state.a_cur_location);
+//
+//    for (int i = 0; i < obs_locs.size(); i++) {
+//      if (abs(katamari_loc.x - obs_locs[i].x) < 0.01 && abs(katamari_loc.y - obs_locs[i].y) < 0.01) {
+//        std::cout << "overlap with " << i << " \n";
+//      }
+//    }
 
-	vec2 prince_loc = prince.state.cur_location;
-	vec2 shark_loc = shark.shark_state.a_cur_location;
-	vec2 kid_loc = kid.kid_state.a_cur_location;
-
-	if (abs(prince_loc.x = shark_loc.x) < 0.1 && abs(prince_loc.y - shark_loc.y) < 0.1) {
-		std::cout << "shark overlap";
-	}
-	
-	if (abs(prince_loc.x = kid_loc.x) < 0.1 && abs(prince_loc.y - kid_loc.y) < 0.1) {
-		std::cout << "kid overlap";
-	}
+//  if (abs(katamari_loc.x = shark_loc.x) < 0.1 && abs(katamari_loc.y - shark_loc.y) < 0.1) {
+//    std::cout << "shark overlap";
+//  }
+//
+//  if (abs(katamari_loc.x = kid_loc.x) < 0.1 && abs(katamari_loc.y - kid_loc.y) < 0.1) {
+//    std::cout << "kid overlap";
+//  }
+  }
+}
 
 int main(void)
 
