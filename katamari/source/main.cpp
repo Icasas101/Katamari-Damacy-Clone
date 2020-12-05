@@ -4,11 +4,26 @@ using namespace Angel;
 
 Prince prince;
 Chicks chick;
-Rooms room;
+Chicks chick2;
+Chicks chick3;
+Chicks chick4;
+Chicks chick5;
+Chicks chick6;
+//Rooms room;
 Kids kid;
+Kids kid2;
 Legos lego;
+Legos lego2;
+Legos lego3;
+Legos lego4;
+Legos lego5;
 Sharks shark;
+Sharks shark2;
+Sharks shark3;
+Sharks shark4;
 Balls ball;
+Balls ball2;
+Balls ball3;
 //Mesh frame;
 
 
@@ -38,14 +53,29 @@ void init(){
   glHint (GL_LINE_SMOOTH_HINT, GL_NICEST);
   glHint (GL_POINT_SMOOTH_HINT, GL_NICEST);
   
-  room.room_gl_init();
+  //room.room_gl_init();
   //frame.mesh_gl_init();
   prince.gl_init();
   chick.chick_gl_init();
+  chick2.chick_gl_init();
+  chick3.chick_gl_init();
+  chick4.chick_gl_init();
+  chick5.chick_gl_init();
+  chick6.chick_gl_init();
   shark.shark_gl_init();
+  shark2.shark_gl_init();
+  shark3.shark_gl_init();
+  shark4.shark_gl_init();
   ball.ball_gl_init();
+  ball2.ball_gl_init();
+  ball3.ball_gl_init();
   lego.lego_gl_init();
+  lego2.lego_gl_init();
+  lego3.lego_gl_init();
+  lego4.lego_gl_init();
+  lego5.lego_gl_init();
   kid.kid_gl_init();
+  kid2.kid_gl_init();
   
 
 
@@ -57,6 +87,30 @@ void animate(){
 	  glfwSetTime(0.0);
 
 	chick.chick_update_state();
+	chick2.chick_update_state();
+	chick3.chick_update_state();
+	chick4.chick_update_state();
+	chick5.chick_update_state();
+	chick6.chick_update_state();
+
+	lego.lego_update_state();
+	lego2.lego_update_state();
+	lego3.lego_update_state();
+	lego4.lego_update_state();
+	lego5.lego_update_state();
+
+	shark.shark_update_state();
+	shark2.shark_update_state();
+	shark3.shark_update_state();
+	shark4.shark_update_state();
+
+	ball.ball_update_state();
+	ball2.ball_update_state();
+	ball3.ball_update_state();
+	
+	kid.kid_update_state();
+	kid2.kid_update_state();
+
 
   }
 }
@@ -107,14 +161,29 @@ int main(void)
     
     glClear(GL_COLOR_BUFFER_BIT);
     
-    room.room_draw(proj);
+    //room.room_draw(proj);
     //frame.mesh_draw(width, height);
     prince.draw(proj);
-	  chick.chick_draw(proj);
+	chick.chick_draw(proj);
+	chick2.chick_draw(proj);
+	chick3.chick_draw(proj);
+	chick4.chick_draw(proj);
+	chick5.chick_draw(proj);
+	chick6.chick_draw(proj);
     shark.shark_draw(proj);
+	shark2.shark_draw(proj);
+	shark3.shark_draw(proj);
+	shark4.shark_draw(proj);
     ball.ball_draw(proj);
+	ball2.ball_draw(proj);
+	ball3.ball_draw(proj);
     lego.lego_draw(proj);
+	lego2.lego_draw(proj);
+	lego3.lego_draw(proj);
+	lego4.lego_draw(proj);
+	lego5.lego_draw(proj);
     kid.kid_draw(proj);
+	kid2.kid_draw(proj);
 	
     
     glfwSwapBuffers(window);

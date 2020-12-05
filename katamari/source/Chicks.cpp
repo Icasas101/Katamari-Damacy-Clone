@@ -53,6 +53,10 @@ void Chicks::chick_update_state() {
     moved = vec2(x_move, y_move);
     for (int i = 0; i < 52; i++) {
         chick_vert[i] += moved;
+		if (chick_state.a_cur_location.x >= 1.0 || chick_state.a_cur_location.x <= -0.5 || chick_state.a_cur_location.y >= 1.0 || chick_state.a_cur_location.y <= -1.0) {
+			chick_state.a_velocity = (chick_state.a_velocity * -0.8)+0.3;
+			chick_state.a_cur_location += chick_state.a_velocity * dt;
+		}
     }
     
 
