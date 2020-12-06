@@ -32,7 +32,7 @@ void Sharks::stuck(Prince pr){
     vec2 old_loc  = shark_state.a_cur_location;
     vec2 moved;
     
-    shark_state.a_cur_location = pr.state.katamari + k_offset; // calculate center while with the katamri
+    shark_state.a_cur_location = pr.state.katamari - k_offset; // calculate center while with the katamri
     
     float x_move = old_loc.x - shark_state.a_cur_location.x;
     float y_move = old_loc.y - shark_state.a_cur_location.y;

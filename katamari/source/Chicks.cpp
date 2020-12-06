@@ -34,7 +34,7 @@ void Chicks::stuck(Prince pr){
     vec2 old_loc  = chick_state.a_cur_location;
     vec2 moved;
     
-    chick_state.a_cur_location = pr.state.katamari + k_offset; // calculate center while with the katamri
+    chick_state.a_cur_location = pr.state.katamari - k_offset; // calculate center while with the katamri
     
     float x_move = old_loc.x - chick_state.a_cur_location.x;
     float y_move = old_loc.y - chick_state.a_cur_location.y;

@@ -32,7 +32,7 @@ void Balls::stuck(Prince pr){
     vec2 old_loc  = ball_state.a_cur_location;
     vec2 moved;
     
-    ball_state.a_cur_location = pr.state.katamari + k_offset; // calculate center while with the katamri
+    ball_state.a_cur_location = pr.state.katamari - k_offset; // calculate center while with the katamri
     
     float x_move = old_loc.x - ball_state.a_cur_location.x;
     float y_move = old_loc.y - ball_state.a_cur_location.y;

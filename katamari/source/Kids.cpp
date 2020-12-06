@@ -32,7 +32,7 @@ void Kids::stuck(Prince pr){
     vec2 old_loc  = kid_state.a_cur_location;
     vec2 moved;
     
-    kid_state.a_cur_location = pr.state.katamari + k_offset; // calculate center while with the katamri
+    kid_state.a_cur_location = pr.state.katamari - k_offset; // calculate center while with the katamri
     
     float x_move = old_loc.x - kid_state.a_cur_location.x;
     float y_move = old_loc.y - kid_state.a_cur_location.y;
