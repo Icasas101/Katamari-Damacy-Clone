@@ -68,8 +68,7 @@ void Balls::ball_update_state() {
 	vec2 old_loc = ball_state.a_cur_location;
 	vec2 moved;
 
-	ball_state.a_cur_location += ball_state.a_velocity * dt; // calculate new center
-    cur_location = ball_state.a_cur_location;
+    ball_state.a_cur_location += ball_state.a_velocity * dt; // calculate new center
 
 	float x_move = old_loc.x - ball_state.a_cur_location.x;
 	float y_move = old_loc.y - ball_state.a_cur_location.y;
@@ -194,7 +193,7 @@ void Balls::ball_gl_init() {
     
     ball_state.a_cur_location = zoom(1.5, 2.0) * ball_state.a_cur_location;
     ball_state.a_cur_location += vec2(-0.3, -0.2);
-    cur_location = ball_state.a_cur_location;
+    cur_location = ball_state.a_cur_location; //Do we need this?
     
     ball_color[0] = white;
     ball_color[1] = blue;
@@ -339,7 +338,7 @@ void Balls::ball_draw(mat4 proj) {
 
 	glUseProgram(ball_GLvars.a_program);
 	glBindVertexArray(ball_GLvars.a_vao);
-	mat4 duck_scale = (Scale(0.5));
+    mat4 duck_scale = (Scale(0.5));
 	//    mat4 M2 = (Translate(1,-1,0) * RotateZ(90));
 	//    mat4 M3 = (Translate(-2.5,-1.5,0) * Scale(4));
 	//    mat4 M4 = (Translate(-0.915,0.5,0) * RotateZ(-45) * Scale(2));

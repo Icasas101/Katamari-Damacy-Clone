@@ -182,6 +182,7 @@ void Kids::kid_gl_init() {
     
     kid_state.a_cur_location += zoom(2.7, 3.0) * kid_state.a_cur_location;
     kid_state.a_cur_location += vec2(0.2, -0.1);
+//    cur_location = kid_state.a_cur_location;
     
     kid_color[0] = pink;
     kid_color[1] = pink;

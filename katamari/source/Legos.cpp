@@ -72,7 +72,7 @@ void Legos::lego_update_state() {
 
 	float x_move = old_loc.x - lego_state.a_cur_location.x;
 	float y_move = old_loc.y - lego_state.a_cur_location.y;
-	moved = vec2(x_move, y_move);
+	moved = vec2(-x_move, -y_move);
 	for (int i = 0; i < 49; i++) {
 		lego_vert[i] += moved;
 	}
@@ -175,6 +175,7 @@ void Legos::lego_gl_init() {
     
     lego_state.a_cur_location = zoom(0.85, 0.85) * lego_state.a_cur_location;
     lego_state.a_cur_location += vec2(0.2, -0.3);
+    cur_location = lego_state.a_cur_location; //This was in balls, what does it do here/do we need it?
 
 	lego_color[0] = orange;
     

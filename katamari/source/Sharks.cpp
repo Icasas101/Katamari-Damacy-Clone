@@ -64,18 +64,18 @@ void Sharks::shark_update_state() {
 	//Set GL state to use this buffer
 	glBindBuffer(GL_ARRAY_BUFFER, shark_GLvars.a_buffer);
 
-	float dt = 1.0 / 60.0;
-	vec2 old_loc = shark_state.a_cur_location;
-	vec2 moved;
+    float dt = 1.0 / 60.0;
+    vec2 old_loc = shark_state.a_cur_location;
+    vec2 moved;
 
 	shark_state.a_cur_location += shark_state.a_velocity * dt; // calculate new center
 
-	float x_move = old_loc.x - shark_state.a_cur_location.x;
-	float y_move = old_loc.y - shark_state.a_cur_location.y;
-	moved = vec2(x_move, y_move);
-	for (int i = 0; i < 58; i++) {
-		shark_vert[i] += moved;
-	}
+    float x_move = old_loc.x - shark_state.a_cur_location.x;
+    float y_move = old_loc.y - shark_state.a_cur_location.y;
+    moved = vec2(-x_move, -y_move);
+    for (int i = 0; i < 58; i++) {
+        shark_vert[i] += moved;
+    }
     if (shark_state.a_cur_location.x > 1.4 || shark_state.a_cur_location.x < -3.5 || shark_state.a_cur_location.y > 2.5 || shark_state.a_cur_location.y < -2.5) {
         shark_state.a_velocity = (shark_state.a_velocity * -0.8);
         //        shark_state.a_cur_location += shark_state.a_velocity * dt;

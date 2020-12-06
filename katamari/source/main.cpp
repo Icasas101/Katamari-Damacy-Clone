@@ -199,25 +199,25 @@ void check_collision() {
   }
   
   // SHARK
-  if (((katamari_loc.x - shark_loc.x) < 0.025 && (katamari_loc.x - shark_loc.x) > -0.025) && ((katamari_loc.y - shark_loc.y) < 0.025 && (katamari_loc.y - shark_loc.y) > -0.025)) {
+  if (((katamari_loc.x - shark_loc.x) < 0.029 && (katamari_loc.x - shark_loc.x) > -0.029) && ((katamari_loc.y - shark_loc.y) < 0.029 && (katamari_loc.y - shark_loc.y) > -0.029)) {
     shark.hit = true;
     shark.k_offset = katamari_loc - shark_loc;
   }
-  if (((katamari_loc.x - shark2_loc.x) < 0.025 && (katamari_loc.x - shark2_loc.x) > -0.025) && ((katamari_loc.y - shark2_loc.y) < 0.025 && (katamari_loc.y - shark2_loc.y) > -0.025)) {
+  if (((katamari_loc.x - shark2_loc.x) < 0.029 && (katamari_loc.x - shark2_loc.x) > -0.029) && ((katamari_loc.y - shark2_loc.y) < 0.029 && (katamari_loc.y - shark2_loc.y) > -0.029)) {
     shark2.hit = true;
     shark2.k_offset = katamari_loc - shark2_loc;
   }
-  if (((katamari_loc.x - shark3_loc.x) < 0.025 && (katamari_loc.x - shark3_loc.x) > -0.025) && ((katamari_loc.y - shark3_loc.y) < 0.025 && (katamari_loc.y - shark3_loc.y) > -0.025)) {
+  if (((katamari_loc.x - shark3_loc.x) < 0.029 && (katamari_loc.x - shark3_loc.x) > -0.029) && ((katamari_loc.y - shark3_loc.y) < 0.029 && (katamari_loc.y - shark3_loc.y) > -0.029)) {
     shark3.hit = true;
     shark3.k_offset = katamari_loc - shark3_loc;
   }
-  if (((katamari_loc.x - shark4_loc.x) < 0.025 && (katamari_loc.x - shark4_loc.x) > -0.025) && ((katamari_loc.y - shark4_loc.y) < 0.025 && (katamari_loc.y - shark4_loc.y) > -0.025)) {
+  if (((katamari_loc.x - shark4_loc.x) < 0.029 && (katamari_loc.x - shark4_loc.x) > -0.029) && ((katamari_loc.y - shark4_loc.y) < 0.029 && (katamari_loc.y - shark4_loc.y) > -0.029)) {
     shark4.hit = true;
     shark4.k_offset = katamari_loc - shark4_loc;
   }
   
   // BALL
-  if (((katamari_loc.x - ball_loc.x) < 0.025 && (katamari_loc.x - ball_loc.x) > -0.025) && ((katamari_loc.y - ball_loc.y) < 0.025 && (katamari_loc.y - ball_loc.y) > -0.025)) {
+  if (((katamari_loc.x - ball_loc.x) < 0.029 && (katamari_loc.x - ball_loc.x) > -0.029) && ((katamari_loc.y - ball_loc.y) < 0.09 && (katamari_loc.y - ball_loc.y) > -0.09)) {
     ball.hit = true;
     ball.k_offset = katamari_loc - ball_loc;
   }
@@ -245,8 +245,14 @@ void check_collision() {
 
 //Call update function 30 times a second
 void animate(){
-  if(glfwGetTime() > 0.08){ // was 0.033
+  if(glfwGetTime() > 0.095){ // was 0.033
     glfwSetTime(0.0);
+    
+    vec2 ball_loc = ball.ball_state.a_cur_location;
+    vec2 shark_loc = shark.shark_state.a_cur_location;
+    vec2 kid_loc = kid.kid_state.a_cur_location;
+    vec2 katamari_loc = prince.state.katamari;
+    
     
     //prince.update_state();
     
@@ -335,8 +341,9 @@ void animate(){
     }
     else {
       shark.stuck(prince);
+//      std::cout<< "\nshark" << shark_loc;
+//      std::cout<< "\nkatamari" << katamari_loc;
     }
-    
     if (shark2.hit == false){
       shark2.shark_update_state();
     }
@@ -361,9 +368,13 @@ void animate(){
     // BALL updates
     if (ball.hit == false){
       ball.ball_update_state();
+      std::cout<< "\nball not hit" << ball_loc;
+      std::cout<< "\nkatamari not hit" << katamari_loc;
     }
     else {
       ball.stuck(prince);
+      std::cout<< "\nball hit" << ball_loc;
+      std::cout<< "\nkatamari hit" << katamari_loc;
     }
     
     if (ball2.hit == false){
@@ -383,9 +394,13 @@ void animate(){
     // KID updates
     if (kid.hit == false){
       kid.kid_update_state();
+      std::cout<<"\nkid not hit" << kid_loc;
+      std::cout<<"\nkatamari not" << katamari_loc;
     }
     else {
       kid.stuck(prince);
+      std::cout<<"\nkid hit" << kid_loc;
+      std::cout<<"\nkatamari hit" << katamari_loc;
     }
     
     if (kid2.hit == false){
@@ -448,8 +463,7 @@ int main(void)
     
     //room.room_draw(proj);
     //frame.mesh_draw(width, height);
-    //prince.draw(proj);
-	chick.chick_draw(proj);
+    chick.chick_draw(proj);
     chick2.chick_draw(proj);
     chick3.chick_draw(proj);
     chick4.chick_draw(proj);
