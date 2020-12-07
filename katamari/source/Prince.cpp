@@ -223,10 +223,10 @@ void Prince::gl_init(){
     prince_color[54] = purple;
     prince_color[55] = purple;
     
-    prince_color[56] = white;
-    prince_color[57] = white;
-    prince_color[58] = white;
-    prince_color[59] = white;
+    prince_color[56] = blue;
+    prince_color[57] = purple;
+    prince_color[58] = purple;
+    prince_color[59] = blue;
     
     size_t prince_color_bytes = 60 * sizeof(vec3);
   

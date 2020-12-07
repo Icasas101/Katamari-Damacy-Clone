@@ -217,15 +217,15 @@ void check_collision() {
   }
   
   // BALL
-  if (((katamari_loc.x - ball_loc.x) < 0.029 && (katamari_loc.x - ball_loc.x) > -0.029) && ((katamari_loc.y - ball_loc.y) < 0.029 && (katamari_loc.y - ball_loc.y) > -0.029)) {
+  if (((katamari_loc.x - ball_loc.x) < 0.025 && (katamari_loc.x - ball_loc.x) > -0.025) && ((katamari_loc.y - ball_loc.y) < 0.025 && (katamari_loc.y - ball_loc.y) > -0.025)) {
     ball.hit = true;
     ball.k_offset = katamari_loc - ball_loc;
   }
-  if (((katamari_loc.x - ball2_loc.x) < 0.029 && (katamari_loc.x - ball2_loc.x) > -0.029) && ((katamari_loc.y - ball2_loc.y) < 0.029 && (katamari_loc.y - ball2_loc.y) > -0.029)) {
+  if (((katamari_loc.x - ball2_loc.x) < 0.025 && (katamari_loc.x - ball2_loc.x) > -0.025) && ((katamari_loc.y - ball2_loc.y) < 0.025 && (katamari_loc.y - ball2_loc.y) > -0.025)) {
     ball2.hit = true;
     ball2.k_offset = katamari_loc - ball2_loc;
   }
-  if (((katamari_loc.x - ball3_loc.x) < 0.029 && (katamari_loc.x - ball3_loc.x) > -0.029) && ((katamari_loc.y - ball3_loc.y) < 0.029 && (katamari_loc.y - ball3_loc.y) > -0.029)) {
+  if (((katamari_loc.x - ball3_loc.x) < 0.025 && (katamari_loc.x - ball3_loc.x) > -0.025) && ((katamari_loc.y - ball3_loc.y) < 0.025 && (katamari_loc.y - ball3_loc.y) > -0.025)) {
     ball3.hit = true;
     ball3.k_offset = katamari_loc - ball3_loc;
   }
