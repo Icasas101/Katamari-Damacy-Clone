@@ -32,7 +32,7 @@ void Legos::stuck(Prince pr){
     vec2 old_loc  = lego_state.a_cur_location;
     vec2 moved;
     
-    lego_state.a_cur_location = pr.state.katamari + k_offset; // calculate center while with the katamri
+    lego_state.a_cur_location = pr.state.katamari - k_offset; // calculate center while with the katamri
     
     float x_move = old_loc.x - lego_state.a_cur_location.x;
     float y_move = old_loc.y - lego_state.a_cur_location.y;
