@@ -217,21 +217,21 @@ void check_collision() {
   }
   
   // BALL
-  if (((katamari_loc.x - ball_loc.x) < 0.029 && (katamari_loc.x - ball_loc.x) > -0.029) && ((katamari_loc.y - ball_loc.y) < 0.09 && (katamari_loc.y - ball_loc.y) > -0.09)) {
+  if (((katamari_loc.x - ball_loc.x) < 0.029 && (katamari_loc.x - ball_loc.x) > -0.029) && ((katamari_loc.y - ball_loc.y) < 0.029 && (katamari_loc.y - ball_loc.y) > -0.029)) {
     ball.hit = true;
     ball.k_offset = katamari_loc - ball_loc;
   }
-  if (((katamari_loc.x - ball2_loc.x) < 0.025 && (katamari_loc.x - ball2_loc.x) > -0.025) && ((katamari_loc.y - ball2_loc.y) < 0.025 && (katamari_loc.y - ball2_loc.y) > -0.025)) {
+  if (((katamari_loc.x - ball2_loc.x) < 0.029 && (katamari_loc.x - ball2_loc.x) > -0.029) && ((katamari_loc.y - ball2_loc.y) < 0.029 && (katamari_loc.y - ball2_loc.y) > -0.029)) {
     ball2.hit = true;
     ball2.k_offset = katamari_loc - ball2_loc;
   }
-  if (((katamari_loc.x - ball3_loc.x) < 0.025 && (katamari_loc.x - ball3_loc.x) > -0.025) && ((katamari_loc.y - ball3_loc.y) < 0.025 && (katamari_loc.y - ball3_loc.y) > -0.025)) {
+  if (((katamari_loc.x - ball3_loc.x) < 0.029 && (katamari_loc.x - ball3_loc.x) > -0.029) && ((katamari_loc.y - ball3_loc.y) < 0.029 && (katamari_loc.y - ball3_loc.y) > -0.029)) {
     ball3.hit = true;
     ball3.k_offset = katamari_loc - ball3_loc;
   }
   
   // KID
-  if (((katamari_loc.x - kid_loc.x) < 0.1 && (katamari_loc.x - kid_loc.x) > -0.1) && ((katamari_loc.y - kid_loc.y) < 0.1 && (katamari_loc.y - kid_loc.y) > -0.1)) {
+  if (((katamari_loc.x - kid_loc.x) < 0.01 && (katamari_loc.x - kid_loc.x) > -0.1) && ((katamari_loc.y - kid_loc.y) < 0.1 && (katamari_loc.y - kid_loc.y) > -0.1)) {
     kid.hit = true;
     kid.k_offset = katamari_loc - kid_loc;
   }
@@ -341,8 +341,6 @@ void animate(){
     }
     else {
       shark.stuck(prince);
-//      std::cout<< "\nshark" << shark_loc;
-//      std::cout<< "\nkatamari" << katamari_loc;
     }
     if (shark2.hit == false){
       shark2.shark_update_state();
@@ -368,13 +366,9 @@ void animate(){
     // BALL updates
     if (ball.hit == false){
       ball.ball_update_state();
-      std::cout<< "\nball not hit" << ball_loc;
-      std::cout<< "\nkatamari not hit" << katamari_loc;
     }
     else {
       ball.stuck(prince);
-      std::cout<< "\nball hit" << ball_loc;
-      std::cout<< "\nkatamari hit" << katamari_loc;
     }
     
     if (ball2.hit == false){
@@ -463,26 +457,26 @@ int main(void)
     
     //room.room_draw(proj);
     //frame.mesh_draw(width, height);
+    kid.kid_draw(proj);
+    kid2.kid_draw(proj);
+    ball.ball_draw(proj);
+    ball2.ball_draw(proj);
+    ball3.ball_draw(proj);
+    shark.shark_draw(proj);
+    shark2.shark_draw(proj);
+    shark3.shark_draw(proj);
+    shark4.shark_draw(proj);
+    lego.lego_draw(proj);
+    lego2.lego_draw(proj);
+    lego3.lego_draw(proj);
+    lego4.lego_draw(proj);
+    lego5.lego_draw(proj);
     chick.chick_draw(proj);
     chick2.chick_draw(proj);
     chick3.chick_draw(proj);
     chick4.chick_draw(proj);
     chick5.chick_draw(proj);
     chick6.chick_draw(proj);
-    shark.shark_draw(proj);
-    shark2.shark_draw(proj);
-    shark3.shark_draw(proj);
-    shark4.shark_draw(proj);
-    ball.ball_draw(proj);
-    ball2.ball_draw(proj);
-    ball3.ball_draw(proj);
-    lego.lego_draw(proj);
-    lego2.lego_draw(proj);
-    lego3.lego_draw(proj);
-    lego4.lego_draw(proj);
-    lego5.lego_draw(proj);
-    kid.kid_draw(proj);
-    kid2.kid_draw(proj);
     prince.draw(proj);
 
     
