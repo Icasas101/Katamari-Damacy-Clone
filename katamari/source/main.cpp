@@ -231,11 +231,11 @@ void check_collision() {
   }
   
   // KID
-  if (((katamari_loc.x - kid_loc.x) < 0.01 && (katamari_loc.x - kid_loc.x) > -0.1) && ((katamari_loc.y - kid_loc.y) < 0.1 && (katamari_loc.y - kid_loc.y) > -0.1)) {
+  if (((katamari_loc.x - kid_loc.x) < 0.025 && (katamari_loc.x - kid_loc.x) > -0.025) && ((katamari_loc.y - kid_loc.y) < 0.025 && (katamari_loc.y - kid_loc.y) > -0.025)) {
     kid.hit = true;
     kid.k_offset = katamari_loc - kid_loc;
   }
-  if (((katamari_loc.x - kid2_loc.x) < 0.1 && (katamari_loc.x - kid2_loc.x) > -0.1) && ((katamari_loc.y - kid2_loc.y) < 0.1 && (katamari_loc.y - kid2_loc.y) > -0.1)) {
+  if (((katamari_loc.x - kid2_loc.x) < 0.025 && (katamari_loc.x - kid2_loc.x) > -0.025) && ((katamari_loc.y - kid2_loc.y) < 0.025 && (katamari_loc.y - kid2_loc.y) > -0.025)) {
     kid2.hit = true;
     kid2.k_offset = katamari_loc - kid2_loc;
   }
